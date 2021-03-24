@@ -1,345 +1,643 @@
-
-
 function glyphSettings()
 {
     var out = [
 
-        {gene:'8030451A03Rik',          taxonomy: 'in_general',  glyphSymbol: '+',  glyphName: 'plus'},
-        {gene:'9130024F11Rik',         taxonomy: 'in_general',  glyphSymbol: '.',  glyphName: 'point'},
-        {gene:'9630002D21Rik',          taxonomy: 'in_general',  glyphSymbol: 's',  glyphName: 'square'},
-        {gene:'Abca13',       taxonomy: 'in_general',  glyphSymbol: '^',  glyphName: 'triangleUp'},
-        {gene:'Abi3bp',          taxonomy: 'in_general',  glyphSymbol: '>',  glyphName: 'triangleRight'},
-        {gene:'Adam33',         taxonomy: 'in_general',  glyphSymbol: '<',  glyphName: 'triangleLeft'},
-        {gene:'Adamts18',          taxonomy: 'in_general',  glyphSymbol: 'p',  glyphName: 'star5'},
-        {gene:'Adamts19',        taxonomy: 'in_general',  glyphSymbol: 'h',  glyphName: 'star6'},
-        {gene:'Adamtsl5',            taxonomy: 'sst',         glyphSymbol: '+',  glyphName: 'plus'},
-        {gene:'Adarb2',         taxonomy: 'sst',         glyphSymbol: 'o',  glyphName: 'circle'},
-        {gene:'Adcyap1',           taxonomy: 'sst',         glyphSymbol: '*',  glyphName: 'asterisk'},
-        {gene:'Adra1a',           taxonomy: 'sst',         glyphSymbol: '.',  glyphName: 'point'},
-        {gene:'Adra1b',         taxonomy: 'sst',         glyphSymbol: 'x',  glyphName: 'cross'},
-        {gene:'Aifm3',         taxonomy: 'sst',         glyphSymbol: 's',  glyphName: 'square'},
-        {gene:'Alkal2',          taxonomy: 'sst',         glyphSymbol: 'd',  glyphName: 'diamond'},
-        {gene:'Angpt1',          taxonomy: 'sst',         glyphSymbol: '^',  glyphName: 'triangleUp'},
-        {gene:'Anxa2',      taxonomy: 'sst',         glyphSymbol: '<',  glyphName: 'triangleLeft'},
-        {gene:'Anxa4',         taxonomy: 'sst',         glyphSymbol: '>',  glyphName: 'triangleRight'},
-        {gene:'Arhgap6',        taxonomy: 'sst',         glyphSymbol: 'p',  glyphName: 'star5'},
-        {gene:'Arhgef38',          taxonomy: 'pvalb',       glyphSymbol: 'o',  glyphName: 'circle'},
-        {gene:'Asb4',         taxonomy: 'pvalb',       glyphSymbol: '*',  glyphName: 'asterisk'},
-        {gene:'Best1',        taxonomy: 'pvalb',       glyphSymbol: 's',  glyphName: 'square'},
-        {gene:'Brs3',        taxonomy: 'pvalb',       glyphSymbol: 'd',  glyphName: 'diamond'},
-        {gene:'C030005K06Rik',        taxonomy: 'pvalb',       glyphSymbol: 'v',  glyphName: 'triangleDown'},
-        {gene:'C130060K24Rik',         taxonomy: 'pvalb',       glyphSymbol: 'p',  glyphName: 'star5'},
-        {gene:'C1ql3',           taxonomy: 'ngf',         glyphSymbol: '+',  glyphName: 'plus'},
-        {gene:'C1ql4',        taxonomy: 'ngf',         glyphSymbol: 'o',  glyphName: 'circle'},
-        {gene:'C7',         taxonomy: 'ngf',         glyphSymbol: '*',  glyphName: 'asterisk'},
-        {gene:'CN725425',         taxonomy: 'ngf',         glyphSymbol: 'x',  glyphName: 'cross'},
-        {gene:'Cacna2d1',           taxonomy: 'ngf',         glyphSymbol: 's',  glyphName: 'square'},
-        {gene:'Calb1',          taxonomy: 'ngf',         glyphSymbol: 'd',  glyphName: 'diamond'},
-        {gene:'Calb2',          taxonomy: 'ngf',         glyphSymbol: '^',  glyphName: 'triangleUp'},
-        {gene:'Calca',         taxonomy: 'ngf',         glyphSymbol: '>',  glyphName: 'triangleRight'},
-        {gene:'Calcr',         taxonomy: 'ngf',         glyphSymbol: 'h',  glyphName: 'star6'},
-        {gene:'Calcrl',        taxonomy: 'cxcl14',      glyphSymbol: 'o',  glyphName: 'circle'},
-        {gene:'Cartpt',        taxonomy: 'cxcl14',      glyphSymbol: '*',  glyphName: 'asterisk'},
-        {gene:'Cbln1',         taxonomy: 'cxcl14',      glyphSymbol: 's',  glyphName: 'square'},
-        {gene:'Cbln2',         taxonomy: 'cxcl14',      glyphSymbol: 'd',  glyphName: 'diamond'},
-        {gene:'Cbln4',         taxonomy: 'cxcl14',      glyphSymbol: 'h',  glyphName: 'star6'},
-        {gene:'Ccdc88c',          taxonomy: 'cnr1',        glyphSymbol: 'o',  glyphName: 'circle'},
-        {gene:'Cd24a',          taxonomy: 'cnr1',        glyphSymbol: '*',  glyphName: 'asterisk'},
-        {gene:'Cd36',           taxonomy: 'cnr1',        glyphSymbol: '.',  glyphName: 'point'},
-        {gene:'Cdc14a',      taxonomy: 'cnr1',        glyphSymbol: 'x',  glyphName: 'cross'},
-        {gene:'Cdh23',        taxonomy: 'cnr1',        glyphSymbol: 's',  glyphName: 'square'},
-        {gene:'Cep83',          taxonomy: 'cnr1',        glyphSymbol: '^',  glyphName: 'triangleUp'},
-        {gene:'Chat',        taxonomy: 'cnr1',        glyphSymbol: 'v',  glyphName: 'triangleDown'},
-        {gene:'Chodl',         taxonomy: 'cnr1',        glyphSymbol: '>',  glyphName: 'triangleRight'},
-        {gene:'Chrdl1',           taxonomy: 'cnr1',        glyphSymbol: '<',  glyphName: 'triangleLeft'},
-        {gene:'Chst9',        taxonomy: 'cnr1',        glyphSymbol: 'p',  glyphName: 'star5'},
-        {gene:'Cnr1',       taxonomy: 'cnr1',        glyphSymbol: 'h',  glyphName: 'star6'},
-        {gene:'Cntn5',          taxonomy: 'vip',         glyphSymbol: '+',  glyphName: 'plus'},
-        {gene:'Col11a1',         taxonomy: 'vip',         glyphSymbol: 'o',  glyphName: 'circle'},
-        {gene:'Col12a1',         taxonomy: 'vip',         glyphSymbol: '*',  glyphName: 'asterisk'},
-        {gene:'Col13a1',         taxonomy: 'vip',         glyphSymbol: '.',  glyphName: 'point'},
-        {gene:'Col14a1',        taxonomy: 'vip',         glyphSymbol: 'x',  glyphName: 'cross'},
-        {gene:'Col15a1',          taxonomy: 'vip',         glyphSymbol: 's',  glyphName: 'square'},
-        {gene:'Col16a1',         taxonomy: 'vip',         glyphSymbol: '^',  glyphName: 'triangleUp'},
-        {gene:'Col18a1',           taxonomy: 'vip',         glyphSymbol: 'v',  glyphName: 'triangleDown'},
-        {gene:'Col1a2',           taxonomy: 'vip',         glyphSymbol: '>',  glyphName: 'triangleRight'},
-        {gene:'Col23a1',         taxonomy: 'vip',         glyphSymbol: 'p',  glyphName: 'star5'},
-        {gene:'Col24a1',       taxonomy: 'less_active', glyphSymbol: '+',  glyphName: 'plus'},
-        {gene:'Col25a1',         taxonomy: 'less_active', glyphSymbol: '*',  glyphName: 'asterisk'},
-        {gene:'Col27a1',         taxonomy: 'less_active', glyphSymbol: '.',  glyphName: 'point'},
-        {gene:'Col4a5',        taxonomy: 'less_active', glyphSymbol: 'd',  glyphName: 'diamond'},
-        {gene:'Col5a2',          taxonomy: 'less_active', glyphSymbol: 'v',  glyphName: 'triangleDown'},
-        {gene:'Col6a5',         taxonomy: 'less_active', glyphSymbol: '^',  glyphName: 'triangleUp'},
-        {gene:'Col9a1', taxonomy: 'less_active', glyphSymbol: '<',  glyphName: 'triangleLeft'},
-        {gene:'Cplane1',          taxonomy: 'less_active', glyphSymbol: '>',  glyphName: 'triangleRight'},
-        {gene:'Cpne4',         taxonomy: 'less_active', glyphSymbol: 'p',  glyphName: 'star5'},
-        {gene:'Cpne7',         taxonomy: 'less_active', glyphSymbol: 'h',  glyphName: 'star6'},
-        {gene:'Cpne8',           taxonomy: 'pc_or_in',    glyphSymbol: '+',  glyphName: 'plus'},
-        {gene:'Cpne9',        taxonomy: 'pc_or_in',    glyphSymbol: 'o',  glyphName: 'circle'},
-        {gene:'Crh',          taxonomy: 'pc_or_in',    glyphSymbol: '*',  glyphName: 'asterisk'},
-        {gene:'Crhbp',       taxonomy: 'pc_or_in',    glyphSymbol: '.',  glyphName: 'point'},
-        {gene:'Crhr1',         taxonomy: 'pc_or_in',    glyphSymbol: 'x',  glyphName: 'cross'},
-        {gene:'Crim1',        taxonomy: 'pc_or_in',    glyphSymbol: 'x',  glyphName: 'cross'},
-        {gene:'Cspg4',          taxonomy: 'pc_or_in',    glyphSymbol: 's',  glyphName: 'square'},
-        {gene:'Ctss',         taxonomy: 'pc_or_in',    glyphSymbol: 'd',  glyphName: 'diamond'},
-        {gene:'Ctxn3',         taxonomy: 'pc_or_in',    glyphSymbol: '^',  glyphName: 'triangleUp'},
-        {gene:'Cx3cr1',        taxonomy: 'pc_or_in',    glyphSymbol: 'v',  glyphName: 'triangleDown'},
-        {gene:'D130009I18Rik',         taxonomy: 'pc_or_in',    glyphSymbol: '<',  glyphName: 'triangleLeft'},
-        {gene:'Dbh',         taxonomy: 'pc_or_in',    glyphSymbol: '>',  glyphName: 'triangleRight'},
-        {gene:'Ddc',        taxonomy: 'pc_or_in',    glyphSymbol: 'h',  glyphName: 'star6'},
-        {gene:'Dnah12',          taxonomy: 'pc',          glyphSymbol: '*',  glyphName: 'asterisk'},
-        {gene:'Dop1a',          taxonomy: 'pc',          glyphSymbol: '.',  glyphName: 'point'},
-        {gene:'Ebf1',          taxonomy: 'pc',          glyphSymbol: '+',  glyphName: 'plus'},
-        {gene:'Ebf2',         taxonomy: 'pc',          glyphSymbol: 'x',  glyphName: 'cross'},
-        {gene:'Ecel1',          taxonomy: 'pc',          glyphSymbol: 'o',  glyphName: 'circle'},
-        {gene:'Egr1',       taxonomy: 'pc',          glyphSymbol: 's',  glyphName: 'square'},
-        {gene:'Enpep',          taxonomy: 'pc',          glyphSymbol: 'd',  glyphName: 'diamond'},
-        {gene:'Epha3',           taxonomy: 'pc',          glyphSymbol: '>',  glyphName: 'triangleRight'},
-        {gene:'Erbb4',        taxonomy: 'pc',          glyphSymbol: 'v',  glyphName: 'triangleDown'},
-        {gene:'Esr1',          taxonomy: 'pc',          glyphSymbol: '<',  glyphName: 'triangleLeft'},
-        {gene:'Esr2', taxonomy: 'pc',          glyphSymbol: '^',  glyphName: 'triangleUp'},
-        {gene:'Etl4',         taxonomy: 'pc',          glyphSymbol: 'p',  glyphName: 'star5'},
-        {gene:'Eya4',         taxonomy: 'pc',          glyphSymbol: 'h',  glyphName: 'star6'},
-        {gene:'Fbn2',       taxonomy: 'pc2',         glyphSymbol: '+',  glyphName: 'plus'},
-        {gene:'Fbxl7',         taxonomy: 'pc2',         glyphSymbol: 'o',  glyphName: 'circle'},
-        {gene:'Fgf10',          taxonomy: 'pc2',         glyphSymbol: '*',  glyphName: 'asterisk'},
-        {gene:'Fgfr1',         taxonomy: 'pc2',         glyphSymbol: '.',  glyphName: 'point'},
-        {gene:'Foxp1',        taxonomy: 'pc2',         glyphSymbol: 's',  glyphName: 'square'},
-        {gene:'Foxp2',          taxonomy: 'pc2',         glyphSymbol: 'v',  glyphName: 'triangleDown'},
-        {gene:'Gabra4',       taxonomy: 'pc2',         glyphSymbol: '>',  glyphName: 'triangleRight'},
-        {gene:'Gabrg1',           taxonomy: 'non_neuron',  glyphSymbol: '*',  glyphName: 'asterisk'},
-        {gene:'Gad1',        taxonomy: 'non_neuron',  glyphSymbol: '.',  glyphName: 'point'},
-        {gene:'Gad2',          taxonomy: 'non_neuron',  glyphSymbol: 's',  glyphName: 'square'},
-        {gene:'Galntl6',          taxonomy: 'non_neuron',  glyphSymbol: 'x',  glyphName: 'cross'},
-        {gene:'Galr1',           taxonomy: 'non_neuron',  glyphSymbol: '+',  glyphName: 'plus'},
-        {gene:'Galr2',         taxonomy: 'non_neuron',  glyphSymbol: 'o',  glyphName: 'circle'},
-        {gene:'Ghr',          taxonomy: 'non_neuron',  glyphSymbol: 'v',  glyphName: 'triangleDown'},
-        {gene:'Gipr',          taxonomy: 'in_general',  glyphSymbol: '+',  glyphName: 'plus'},
-        {gene:'Glp1r',         taxonomy: 'in_general',  glyphSymbol: '.',  glyphName: 'point'},
-        {gene:'Gm32647',          taxonomy: 'in_general',  glyphSymbol: 's',  glyphName: 'square'},
-        {gene:'Gm47757',       taxonomy: 'in_general',  glyphSymbol: '^',  glyphName: 'triangleUp'},
-        {gene:'Gpc5',          taxonomy: 'in_general',  glyphSymbol: '>',  glyphName: 'triangleRight'},
-        {gene:'Gpr101',         taxonomy: 'in_general',  glyphSymbol: '<',  glyphName: 'triangleLeft'},
-        {gene:'Gpr139',          taxonomy: 'in_general',  glyphSymbol: 'p',  glyphName: 'star5'},
-        {gene:'Gpr149',        taxonomy: 'in_general',  glyphSymbol: 'h',  glyphName: 'star6'},
-        {gene:'Gpr153',            taxonomy: 'sst',         glyphSymbol: '+',  glyphName: 'plus'},
-        {gene:'Gpr156',         taxonomy: 'sst',         glyphSymbol: 'o',  glyphName: 'circle'},
-        {gene:'Gpr176',           taxonomy: 'sst',         glyphSymbol: '*',  glyphName: 'asterisk'},
-        {gene:'Gpr39',           taxonomy: 'sst',         glyphSymbol: '.',  glyphName: 'point'},
-        {gene:'Gpr6',         taxonomy: 'sst',         glyphSymbol: 'x',  glyphName: 'cross'},
-        {gene:'Gpr83',         taxonomy: 'sst',         glyphSymbol: 's',  glyphName: 'square'},
-        {gene:'Gpr88',          taxonomy: 'sst',         glyphSymbol: 'd',  glyphName: 'diamond'},
-        {gene:'Grik1',          taxonomy: 'sst',         glyphSymbol: '^',  glyphName: 'triangleUp'},
-        {gene:'Grin2c',      taxonomy: 'sst',         glyphSymbol: '<',  glyphName: 'triangleLeft'},
-        {gene:'Grp',         taxonomy: 'sst',         glyphSymbol: '>',  glyphName: 'triangleRight'},
-        {gene:'Gsg1l',        taxonomy: 'sst',         glyphSymbol: 'p',  glyphName: 'star5'},
-        {gene:'Gulp1',          taxonomy: 'pvalb',       glyphSymbol: 'o',  glyphName: 'circle'},
-        {gene:'Hcn1',         taxonomy: 'pvalb',       glyphSymbol: '*',  glyphName: 'asterisk'},
-        {gene:'Hcrtr1',        taxonomy: 'pvalb',       glyphSymbol: 's',  glyphName: 'square'},
-        {gene:'Hcrtr2',        taxonomy: 'pvalb',       glyphSymbol: 'd',  glyphName: 'diamond'},
-        {gene:'Hmcn1',        taxonomy: 'pvalb',       glyphSymbol: 'v',  glyphName: 'triangleDown'},
-        {gene:'Htr2a',         taxonomy: 'pvalb',       glyphSymbol: 'p',  glyphName: 'star5'},
-        {gene:'Htr2c',           taxonomy: 'ngf',         glyphSymbol: '+',  glyphName: 'plus'},
-        {gene:'Htr7',        taxonomy: 'ngf',         glyphSymbol: 'o',  glyphName: 'circle'},
-        {gene:'Igf1',         taxonomy: 'ngf',         glyphSymbol: '*',  glyphName: 'asterisk'},
-        {gene:'Ikzf1',         taxonomy: 'ngf',         glyphSymbol: 'x',  glyphName: 'cross'},
-        {gene:'Il1rap',           taxonomy: 'ngf',         glyphSymbol: 's',  glyphName: 'square'},
-        {gene:'Il1rapl2',          taxonomy: 'ngf',         glyphSymbol: 'd',  glyphName: 'diamond'},
-        {gene:'Il20ra',          taxonomy: 'ngf',         glyphSymbol: '^',  glyphName: 'triangleUp'},
-        {gene:'Irs4',         taxonomy: 'ngf',         glyphSymbol: '>',  glyphName: 'triangleRight'},
-        {gene:'Itga1',         taxonomy: 'ngf',         glyphSymbol: 'h',  glyphName: 'star6'},
-        {gene:'Itih5',        taxonomy: 'cxcl14',      glyphSymbol: 'o',  glyphName: 'circle'},
-        {gene:'Kcna1',        taxonomy: 'cxcl14',      glyphSymbol: '*',  glyphName: 'asterisk'},
-        {gene:'Kcnh8',         taxonomy: 'cxcl14',      glyphSymbol: 's',  glyphName: 'square'},
-        {gene:'Kcnip4',         taxonomy: 'cxcl14',      glyphSymbol: 'd',  glyphName: 'diamond'},
-        {gene:'Kcnmb2',         taxonomy: 'cxcl14',      glyphSymbol: 'h',  glyphName: 'star6'},
-        {gene:'Kcnq4',          taxonomy: 'cnr1',        glyphSymbol: 'o',  glyphName: 'circle'},
-        {gene:'Klhl1',          taxonomy: 'cnr1',        glyphSymbol: '*',  glyphName: 'asterisk'},
-        {gene:'Lama1',           taxonomy: 'cnr1',        glyphSymbol: '.',  glyphName: 'point'},
-        {gene:'Lamb1',      taxonomy: 'cnr1',        glyphSymbol: 'x',  glyphName: 'cross'},
-        {gene:'Lamp5',        taxonomy: 'cnr1',        glyphSymbol: 's',  glyphName: 'square'},
-        {gene:'Lepr',          taxonomy: 'cnr1',        glyphSymbol: '^',  glyphName: 'triangleUp'},
-        {gene:'Lhx1',        taxonomy: 'cnr1',        glyphSymbol: 'v',  glyphName: 'triangleDown'},
-        {gene:'Lhx4',         taxonomy: 'cnr1',        glyphSymbol: '>',  glyphName: 'triangleRight'},
-        {gene:'Lhx9',           taxonomy: 'cnr1',        glyphSymbol: '<',  glyphName: 'triangleLeft'},
-        {gene:'Lmx1a',        taxonomy: 'cnr1',        glyphSymbol: 'p',  glyphName: 'star5'},
-        {gene:'Lmx1b',       taxonomy: 'cnr1',        glyphSymbol: 'h',  glyphName: 'star6'},
-        {gene:'Maco1',          taxonomy: 'vip',         glyphSymbol: '+',  glyphName: 'plus'},
-        {gene:'Maf',         taxonomy: 'vip',         glyphSymbol: 'o',  glyphName: 'circle'},
-        {gene:'Mag',         taxonomy: 'vip',         glyphSymbol: '*',  glyphName: 'asterisk'},
-        {gene:'Maoa',         taxonomy: 'vip',         glyphSymbol: '.',  glyphName: 'point'},
-        {gene:'Maob',        taxonomy: 'vip',         glyphSymbol: 'x',  glyphName: 'cross'},
-        {gene:'Map2',          taxonomy: 'vip',         glyphSymbol: 's',  glyphName: 'square'},
-        {gene:'Mc4r',         taxonomy: 'vip',         glyphSymbol: '^',  glyphName: 'triangleUp'},
-        {gene:'Mog',           taxonomy: 'vip',         glyphSymbol: 'v',  glyphName: 'triangleDown'},
-        {gene:'Mybpc1',           taxonomy: 'vip',         glyphSymbol: '>',  glyphName: 'triangleRight'},
-        {gene:'Myoz3',         taxonomy: 'vip',         glyphSymbol: 'p',  glyphName: 'star5'},
-        {gene:'Necab1',       taxonomy: 'less_active', glyphSymbol: '+',  glyphName: 'plus'},
-        {gene:'Necab2',         taxonomy: 'less_active', glyphSymbol: '*',  glyphName: 'asterisk'},
-        {gene:'Nefh',         taxonomy: 'less_active', glyphSymbol: '.',  glyphName: 'point'},
-        {gene:'Nefl',        taxonomy: 'less_active', glyphSymbol: 'd',  glyphName: 'diamond'},
-        {gene:'Nefm',          taxonomy: 'less_active', glyphSymbol: 'v',  glyphName: 'triangleDown'},
-        {gene:'Nfia',         taxonomy: 'less_active', glyphSymbol: '^',  glyphName: 'triangleUp'},
-        {gene:'Nfib', taxonomy: 'less_active', glyphSymbol: '<',  glyphName: 'triangleLeft'},
-        {gene:'Nmu',          taxonomy: 'less_active', glyphSymbol: '>',  glyphName: 'triangleRight'},
-        {gene:'Nos1',         taxonomy: 'less_active', glyphSymbol: 'p',  glyphName: 'star5'},
-        {gene:'Npas1',         taxonomy: 'less_active', glyphSymbol: 'h',  glyphName: 'star6'},
-        {gene:'Npffr1',           taxonomy: 'pc_or_in',    glyphSymbol: '+',  glyphName: 'plus'},
-        {gene:'Npffr2',        taxonomy: 'pc_or_in',    glyphSymbol: 'o',  glyphName: 'circle'},
-        {gene:'Npnt',          taxonomy: 'pc_or_in',    glyphSymbol: '*',  glyphName: 'asterisk'},
-        {gene:'Npr1',       taxonomy: 'pc_or_in',    glyphSymbol: '.',  glyphName: 'point'},
-        {gene:'Npr3',         taxonomy: 'pc_or_in',    glyphSymbol: 'x',  glyphName: 'cross'},
-        {gene:'Nps',        taxonomy: 'pc_or_in',    glyphSymbol: 'x',  glyphName: 'cross'},
-        {gene:'Npsr1',          taxonomy: 'pc_or_in',    glyphSymbol: 's',  glyphName: 'square'},
-        {gene:'Npy',         taxonomy: 'pc_or_in',    glyphSymbol: 'd',  glyphName: 'diamond'},
-        {gene:'Npy1r',         taxonomy: 'pc_or_in',    glyphSymbol: '^',  glyphName: 'triangleUp'},
-        {gene:'Npy2r',        taxonomy: 'pc_or_in',    glyphSymbol: 'v',  glyphName: 'triangleDown'},
-        {gene:'Npy5r',         taxonomy: 'pc_or_in',    glyphSymbol: '<',  glyphName: 'triangleLeft'},
-        {gene:'Nr2f2',         taxonomy: 'pc_or_in',    glyphSymbol: '>',  glyphName: 'triangleRight'},
-        {gene:'Nr4a2',        taxonomy: 'pc_or_in',    glyphSymbol: 'h',  glyphName: 'star6'},
-        {gene:'Nrn1',          taxonomy: 'pc',          glyphSymbol: '*',  glyphName: 'asterisk'},
-        {gene:'Ntrk1',          taxonomy: 'pc',          glyphSymbol: '.',  glyphName: 'point'},
-        {gene:'Nts',          taxonomy: 'pc',          glyphSymbol: '+',  glyphName: 'plus'},
-        {gene:'Onecut1',         taxonomy: 'pc',          glyphSymbol: 'x',  glyphName: 'cross'},
-        {gene:'Onecut3',          taxonomy: 'pc',          glyphSymbol: 'o',  glyphName: 'circle'},
-        {gene:'Oprk1',       taxonomy: 'pc',          glyphSymbol: 's',  glyphName: 'square'},
-        {gene:'Oprm1',          taxonomy: 'pc',          glyphSymbol: 'd',  glyphName: 'diamond'},
-        {gene:'Otof',           taxonomy: 'pc',          glyphSymbol: '>',  glyphName: 'triangleRight'},
-        {gene:'Otx2',        taxonomy: 'pc',          glyphSymbol: 'v',  glyphName: 'triangleDown'},
-        {gene:'Oxtr',          taxonomy: 'pc',          glyphSymbol: '<',  glyphName: 'triangleLeft'},
-        {gene:'P2rx7', taxonomy: 'pc',          glyphSymbol: '^',  glyphName: 'triangleUp'},
-        {gene:'Pamr1',         taxonomy: 'pc',          glyphSymbol: 'p',  glyphName: 'star5'},
-        {gene:'Pax2',         taxonomy: 'pc',          glyphSymbol: 'h',  glyphName: 'star6'},
-        {gene:'Pax3',       taxonomy: 'pc2',         glyphSymbol: '+',  glyphName: 'plus'},
-        {gene:'Pax5',         taxonomy: 'pc2',         glyphSymbol: 'o',  glyphName: 'circle'},
-        {gene:'Pax6',          taxonomy: 'pc2',         glyphSymbol: '*',  glyphName: 'asterisk'},
-        {gene:'Pax7',         taxonomy: 'pc2',         glyphSymbol: '.',  glyphName: 'point'},
-        {gene:'Pde11a',        taxonomy: 'pc2',         glyphSymbol: 's',  glyphName: 'square'},
-        {gene:'Pde7b',          taxonomy: 'pc2',         glyphSymbol: 'v',  glyphName: 'triangleDown'},
-        {gene:'Pdgfra',       taxonomy: 'pc2',         glyphSymbol: '>',  glyphName: 'triangleRight'},
-        {gene:'Pdyn',           taxonomy: 'non_neuron',  glyphSymbol: '*',  glyphName: 'asterisk'},
-        {gene:'Pdzd2',        taxonomy: 'non_neuron',  glyphSymbol: '.',  glyphName: 'point'},
-        {gene:'Pdzrn3',          taxonomy: 'non_neuron',  glyphSymbol: 's',  glyphName: 'square'},
-        {gene:'Penk',          taxonomy: 'non_neuron',  glyphSymbol: 'x',  glyphName: 'cross'},
-        {gene:'Piezo2',           taxonomy: 'non_neuron',  glyphSymbol: '+',  glyphName: 'plus'},
-        {gene:'Plk5',         taxonomy: 'non_neuron',  glyphSymbol: 'o',  glyphName: 'circle'},
-        {gene:'Pnoc',          taxonomy: 'non_neuron',  glyphSymbol: 'v',  glyphName: 'triangleDown'},
-        {gene:'Pon2',          taxonomy: 'in_general',  glyphSymbol: '+',  glyphName: 'plus'},
-        {gene:'Pon3',         taxonomy: 'in_general',  glyphSymbol: '.',  glyphName: 'point'},
-        {gene:'Postn',          taxonomy: 'in_general',  glyphSymbol: 's',  glyphName: 'square'},
-        {gene:'Pou6f2',       taxonomy: 'in_general',  glyphSymbol: '^',  glyphName: 'triangleUp'},
-        {gene:'Prkcq',          taxonomy: 'in_general',  glyphSymbol: '>',  glyphName: 'triangleRight'},
-        {gene:'Prkd1',         taxonomy: 'in_general',  glyphSymbol: '<',  glyphName: 'triangleLeft'},
-        {gene:'Prlr',          taxonomy: 'in_general',  glyphSymbol: 'p',  glyphName: 'star5'},
-        {gene:'Prox1',        taxonomy: 'in_general',  glyphSymbol: 'h',  glyphName: 'star6'},
-        {gene:'Prph',            taxonomy: 'sst',         glyphSymbol: '+',  glyphName: 'plus'},
-        {gene:'Prss23',         taxonomy: 'sst',         glyphSymbol: 'o',  glyphName: 'circle'},
-        {gene:'Pth2r',           taxonomy: 'sst',         glyphSymbol: '*',  glyphName: 'asterisk'},
-        {gene:'Pvalb',           taxonomy: 'sst',         glyphSymbol: '.',  glyphName: 'point'},
-        {gene:'Qrfpr',         taxonomy: 'sst',         glyphSymbol: 'x',  glyphName: 'cross'},
-        {gene:'Rab35',         taxonomy: 'sst',         glyphSymbol: 's',  glyphName: 'square'},
-        {gene:'Rai14',          taxonomy: 'sst',         glyphSymbol: 'd',  glyphName: 'diamond'},
-        {gene:'Reln',          taxonomy: 'sst',         glyphSymbol: '^',  glyphName: 'triangleUp'},
-        {gene:'Rgs5',      taxonomy: 'sst',         glyphSymbol: '<',  glyphName: 'triangleLeft'},
-        {gene:'Rln3',         taxonomy: 'sst',         glyphSymbol: '>',  glyphName: 'triangleRight'},
-        {gene:'Rmst',        taxonomy: 'sst',         glyphSymbol: 'p',  glyphName: 'star5'},
-        {gene:'Rnf220',          taxonomy: 'pvalb',       glyphSymbol: 'o',  glyphName: 'circle'},
-        {gene:'Robo3',         taxonomy: 'pvalb',       glyphSymbol: '*',  glyphName: 'asterisk'},
-        {gene:'Rorb',        taxonomy: 'pvalb',       glyphSymbol: 's',  glyphName: 'square'},
-        {gene:'Rreb1',        taxonomy: 'pvalb',       glyphSymbol: 'd',  glyphName: 'diamond'},
-        {gene:'Rubcnl',        taxonomy: 'pvalb',       glyphSymbol: 'v',  glyphName: 'triangleDown'},
-        {gene:'Runx1',         taxonomy: 'pvalb',       glyphSymbol: 'p',  glyphName: 'star5'},
-        {gene:'Rxfp1',           taxonomy: 'ngf',         glyphSymbol: '+',  glyphName: 'plus'},
-        {gene:'Rxfp2',        taxonomy: 'ngf',         glyphSymbol: 'o',  glyphName: 'circle'},
-        {gene:'Samd3',         taxonomy: 'ngf',         glyphSymbol: '*',  glyphName: 'asterisk'},
-        {gene:'Satb1',         taxonomy: 'ngf',         glyphSymbol: 'x',  glyphName: 'cross'},
-        {gene:'Satb2',           taxonomy: 'ngf',         glyphSymbol: 's',  glyphName: 'square'},
-        {gene:'Scn5a',          taxonomy: 'ngf',         glyphSymbol: 'd',  glyphName: 'diamond'},
-        {gene:'Scube2',          taxonomy: 'ngf',         glyphSymbol: '^',  glyphName: 'triangleUp'},
-        {gene:'Sema3a',         taxonomy: 'ngf',         glyphSymbol: '>',  glyphName: 'triangleRight'},
-        {gene:'Sema3e',         taxonomy: 'ngf',         glyphSymbol: 'h',  glyphName: 'star6'},
-        {gene:'Serpinb1b',        taxonomy: 'cxcl14',      glyphSymbol: 'o',  glyphName: 'circle'},
-        {gene:'Shox2',        taxonomy: 'cxcl14',      glyphSymbol: '*',  glyphName: 'asterisk'},
-        {gene:'Six3os1',         taxonomy: 'cxcl14',      glyphSymbol: 's',  glyphName: 'square'},
-        {gene:'Skor2',         taxonomy: 'cxcl14',      glyphSymbol: 'd',  glyphName: 'diamond'},
-        {gene:'Slc13a3',         taxonomy: 'cxcl14',      glyphSymbol: 'h',  glyphName: 'star6'},
-        {gene:'Slc17a6',          taxonomy: 'cnr1',        glyphSymbol: 'o',  glyphName: 'circle'},
-        {gene:'Slc17a7',          taxonomy: 'cnr1',        glyphSymbol: '*',  glyphName: 'asterisk'},
-        {gene:'Slc17a8',           taxonomy: 'cnr1',        glyphSymbol: '.',  glyphName: 'point'},
-        {gene:'Slc18a2',      taxonomy: 'cnr1',        glyphSymbol: 'x',  glyphName: 'cross'},
-        {gene:'Slc1a2',        taxonomy: 'cnr1',        glyphSymbol: 's',  glyphName: 'square'},
-        {gene:'Slc24a4',          taxonomy: 'cnr1',        glyphSymbol: '^',  glyphName: 'triangleUp'},
-        {gene:'Slc32a1',        taxonomy: 'cnr1',        glyphSymbol: 'v',  glyphName: 'triangleDown'},
-        {gene:'Slc47a1',         taxonomy: 'cnr1',        glyphSymbol: '>',  glyphName: 'triangleRight'},
-        {gene:'Slc4a4',           taxonomy: 'cnr1',        glyphSymbol: '<',  glyphName: 'triangleLeft'},
-        {gene:'Slc5a7',        taxonomy: 'cnr1',        glyphSymbol: 'p',  glyphName: 'star5'},
-        {gene:'Slc6a2',       taxonomy: 'cnr1',        glyphSymbol: 'h',  glyphName: 'star6'},
-        {gene:'Slc6a20a',          taxonomy: 'vip',         glyphSymbol: '+',  glyphName: 'plus'},
-        {gene:'Slc6a4',         taxonomy: 'vip',         glyphSymbol: 'o',  glyphName: 'circle'},
-        {gene:'Slc6a5',         taxonomy: 'vip',         glyphSymbol: '*',  glyphName: 'asterisk'},
-        {gene:'Slco1a4',         taxonomy: 'vip',         glyphSymbol: '.',  glyphName: 'point'},
-        {gene:'Snap25',        taxonomy: 'vip',         glyphSymbol: 'x',  glyphName: 'cross'},
-        {gene:'Sntg2',          taxonomy: 'vip',         glyphSymbol: 's',  glyphName: 'square'},
-        {gene:'Sox1ot',         taxonomy: 'vip',         glyphSymbol: '^',  glyphName: 'triangleUp'},
-        {gene:'Sox2ot',           taxonomy: 'vip',         glyphSymbol: 'v',  glyphName: 'triangleDown'},
-        {gene:'Sox6',           taxonomy: 'vip',         glyphSymbol: '>',  glyphName: 'triangleRight'},
-        {gene:'Spef2',         taxonomy: 'vip',         glyphSymbol: 'p',  glyphName: 'star5'},
-        {gene:'Sst',       taxonomy: 'less_active', glyphSymbol: '+',  glyphName: 'plus'},
-        {gene:'St18',         taxonomy: 'less_active', glyphSymbol: '*',  glyphName: 'asterisk'},
-        {gene:'Sulf1',         taxonomy: 'less_active', glyphSymbol: '.',  glyphName: 'point'},
-        {gene:'Synpr',        taxonomy: 'less_active', glyphSymbol: 'd',  glyphName: 'diamond'},
-        {gene:'Syt10',          taxonomy: 'less_active', glyphSymbol: 'v',  glyphName: 'triangleDown'},
-        {gene:'Tac1',         taxonomy: 'less_active', glyphSymbol: '^',  glyphName: 'triangleUp'},
-        {gene:'Tacr1', taxonomy: 'less_active', glyphSymbol: '<',  glyphName: 'triangleLeft'},
-        {gene:'Tacr3',          taxonomy: 'less_active', glyphSymbol: '>',  glyphName: 'triangleRight'},
-        {gene:'Tcf7l2',         taxonomy: 'less_active', glyphSymbol: 'p',  glyphName: 'star5'},
-        {gene:'Tfap2b',         taxonomy: 'less_active', glyphSymbol: 'h',  glyphName: 'star6'},
-        {gene:'Tfap2d',           taxonomy: 'pc_or_in',    glyphSymbol: '+',  glyphName: 'plus'},
-        {gene:'Th',        taxonomy: 'pc_or_in',    glyphSymbol: 'o',  glyphName: 'circle'},
-        {gene:'Thrb',          taxonomy: 'pc_or_in',    glyphSymbol: '*',  glyphName: 'asterisk'},
-        {gene:'Tmem178',       taxonomy: 'pc_or_in',    glyphSymbol: '.',  glyphName: 'point'},
-        {gene:'Tmem72',         taxonomy: 'pc_or_in',    glyphSymbol: 'x',  glyphName: 'cross'},
-        {gene:'Tnc',        taxonomy: 'pc_or_in',    glyphSymbol: 'x',  glyphName: 'cross'},
-        {gene:'Tnnt1',          taxonomy: 'pc_or_in',    glyphSymbol: 's',  glyphName: 'square'},
-        {gene:'Tnnt2',         taxonomy: 'pc_or_in',    glyphSymbol: 'd',  glyphName: 'diamond'},
-        {gene:'Tph2',         taxonomy: 'pc_or_in',    glyphSymbol: '^',  glyphName: 'triangleUp'},
-        {gene:'Trhr',        taxonomy: 'pc_or_in',    glyphSymbol: 'v',  glyphName: 'triangleDown'},
-        {gene:'Ttn',         taxonomy: 'pc_or_in',    glyphSymbol: '<',  glyphName: 'triangleLeft'},
-        {gene:'Ttr',         taxonomy: 'pc_or_in',    glyphSymbol: '>',  glyphName: 'triangleRight'},
-        {gene:'Tut4',        taxonomy: 'pc_or_in',    glyphSymbol: 'h',  glyphName: 'star6'},
-        {gene:'Usp24',          taxonomy: 'pc',          glyphSymbol: '*',  glyphName: 'asterisk'},
-        {gene:'Usp43',          taxonomy: 'pc',          glyphSymbol: '.',  glyphName: 'point'},
-        {gene:'Vav3',          taxonomy: 'pc',          glyphSymbol: '+',  glyphName: 'plus'},
-        {gene:'Vmn1r196',         taxonomy: 'pc',          glyphSymbol: 'x',  glyphName: 'cross'},
-        {gene:'Vmn1r206',          taxonomy: 'pc',          glyphSymbol: 'o',  glyphName: 'circle'},
-        {gene:'Vmn1r209',       taxonomy: 'pc',          glyphSymbol: 's',  glyphName: 'square'},
-        {gene:'Vsx2',          taxonomy: 'pc',          glyphSymbol: 'd',  glyphName: 'diamond'},
-        {gene:'Vwc2',           taxonomy: 'pc',          glyphSymbol: '>',  glyphName: 'triangleRight'},
-        {gene:'Xirp2',        taxonomy: 'pc',          glyphSymbol: 'v',  glyphName: 'triangleDown'},
-        {gene:'Zeb2',          taxonomy: 'pc',          glyphSymbol: '<',  glyphName: 'triangleLeft'},
-        {gene:'Zfhx3', taxonomy: 'pc',          glyphSymbol: '^',  glyphName: 'triangleUp'},
-        {gene:'Zfp804b',         taxonomy: 'pc',          glyphSymbol: 'p',  glyphName: 'star5'},
-
-        {gene: 'Generic',       taxonomy: 'generic',     glyphSymbol: 'o',  glyphName: 'circle'},
-
+        {gene:'8030451A03Rik',          taxonomy: '8030451A03Rik',  glyphSymbol: '+',  glyphName: 'plus'},
+        {gene:'9130024F11Rik',         taxonomy: '9130024F11Rik',  glyphSymbol: '.',  glyphName: 'point'},
+        {gene:'9630002D21Rik',          taxonomy: '9630002D21Rik',  glyphSymbol: 's',  glyphName: 'square'},
+        {gene:'Abca13',       taxonomy: 'Abca13',  glyphSymbol: '^',  glyphName: 'triangleUp'},
+        {gene:'Abi3bp',          taxonomy: 'Abi3bp',  glyphSymbol: '>',  glyphName: 'triangleRight'},
+        {gene:'Adam33',         taxonomy: 'Adam33',  glyphSymbol: '<',  glyphName: 'triangleLeft'},
+        {gene:'Adamts18',          taxonomy: 'Adamts18',  glyphSymbol: 'p',  glyphName: 'star5'},
+        {gene:'Adamts19',        taxonomy: 'Adamts19',  glyphSymbol: 'h',  glyphName: 'star6'},
+        {gene:'Adamtsl5',            taxonomy: 'Adamtsl5',         glyphSymbol: '+',  glyphName: 'plus'},
+        {gene:'Adarb2',         taxonomy: 'Adarb2',         glyphSymbol: 'o',  glyphName: 'circle'},
+        {gene:'Adcyap1',           taxonomy: 'Adcyap1',         glyphSymbol: '*',  glyphName: 'asterisk'},
+        {gene:'Adra1a',           taxonomy: 'Adra1a',         glyphSymbol: '.',  glyphName: 'point'},
+        {gene:'Adra1b',         taxonomy: 'Adra1b',         glyphSymbol: 'x',  glyphName: 'cross'},
+        {gene:'Aifm3',         taxonomy: 'Aifm3',         glyphSymbol: 's',  glyphName: 'square'},
+        {gene:'Alkal2',          taxonomy: 'Alkal2',         glyphSymbol: 'd',  glyphName: 'diamond'},
+        {gene:'Angpt1',          taxonomy: 'Angpt1',         glyphSymbol: '^',  glyphName: 'triangleUp'},
+        {gene:'Anxa2',      taxonomy: 'Anxa2',         glyphSymbol: '<',  glyphName: 'triangleLeft'},
+        {gene:'Anxa4',         taxonomy: 'Anxa4',         glyphSymbol: '>',  glyphName: 'triangleRight'},
+        {gene:'Arhgap6',        taxonomy: 'Arhgap6',         glyphSymbol: 'p',  glyphName: 'star5'},
+        {gene:'Arhgef38',          taxonomy: 'Arhgef38',       glyphSymbol: 'o',  glyphName: 'circle'},
+        {gene:'Asb4',         taxonomy: 'Asb4',       glyphSymbol: '*',  glyphName: 'asterisk'},
+        {gene:'Best1',        taxonomy: 'Best1',       glyphSymbol: 's',  glyphName: 'square'},
+        {gene:'Brs3',        taxonomy: 'Brs3',       glyphSymbol: 'd',  glyphName: 'diamond'},
+        {gene:'C030005K06Rik',        taxonomy: 'C030005K06Rik',       glyphSymbol: 'v',  glyphName: 'triangleDown'},
+        {gene:'C130060K24Rik',         taxonomy: 'C130060K24Rik',       glyphSymbol: 'p',  glyphName: 'star5'},
+        {gene:'C1ql3',           taxonomy: 'C1ql3',         glyphSymbol: '+',  glyphName: 'plus'},
+        {gene:'C1ql4',        taxonomy: 'C1ql4',         glyphSymbol: 'o',  glyphName: 'circle'},
+        {gene:'C7',         taxonomy: 'C7',         glyphSymbol: '*',  glyphName: 'asterisk'},
+        {gene:'CN725425',         taxonomy: 'CN725425',         glyphSymbol: 'x',  glyphName: 'cross'},
+        {gene:'Cacna2d1',           taxonomy: 'Cacna2d1',         glyphSymbol: 's',  glyphName: 'square'},
+        {gene:'Calb1',          taxonomy: 'Calb1',         glyphSymbol: 'd',  glyphName: 'diamond'},
+        {gene:'Calb2',          taxonomy: 'Calb2',         glyphSymbol: '^',  glyphName: 'triangleUp'},
+        {gene:'Calca',         taxonomy: 'Calca',         glyphSymbol: '>',  glyphName: 'triangleRight'},
+        {gene:'Calcr',         taxonomy: 'Calcr',         glyphSymbol: 'h',  glyphName: 'star6'},
+        {gene:'Calcrl',        taxonomy: 'Calcrl',      glyphSymbol: 'o',  glyphName: 'circle'},
+        {gene:'Cartpt',        taxonomy: 'Cartpt',      glyphSymbol: '*',  glyphName: 'asterisk'},
+        {gene:'Cbln1',         taxonomy: 'Cbln1',      glyphSymbol: 's',  glyphName: 'square'},
+        {gene:'Cbln2',         taxonomy: 'Cbln2',      glyphSymbol: 'd',  glyphName: 'diamond'},
+        {gene:'Cbln4',         taxonomy: 'Cbln4',      glyphSymbol: 'h',  glyphName: 'star6'},
+        {gene:'Ccdc88c',          taxonomy: 'Ccdc88c',        glyphSymbol: 'o',  glyphName: 'circle'},
+        {gene:'Cd24a',          taxonomy: 'Cd24a',        glyphSymbol: '*',  glyphName: 'asterisk'},
+        {gene:'Cd36',           taxonomy: 'Cd36',        glyphSymbol: '.',  glyphName: 'point'},
+        {gene:'Cdc14a',      taxonomy: 'Cdc14a',        glyphSymbol: 'x',  glyphName: 'cross'},
+        {gene:'Cdh23',        taxonomy: 'Cdh23',        glyphSymbol: 's',  glyphName: 'square'},
+        {gene:'Cep83',          taxonomy: 'Cep83',        glyphSymbol: '^',  glyphName: 'triangleUp'},
+        {gene:'Chat',        taxonomy: 'Chat',        glyphSymbol: 'v',  glyphName: 'triangleDown'},
+        {gene:'Chodl',         taxonomy: 'Chodl',        glyphSymbol: '>',  glyphName: 'triangleRight'},
+        {gene:'Chrdl1',           taxonomy: 'Chrdl1',        glyphSymbol: '<',  glyphName: 'triangleLeft'},
+        {gene:'Chst9',        taxonomy: 'Chst9',        glyphSymbol: 'p',  glyphName: 'star5'},
+        {gene:'Cnr1',       taxonomy: 'Cnr1',        glyphSymbol: 'h',  glyphName: 'star6'},
+        {gene:'Cntn5',          taxonomy: 'Cntn5',         glyphSymbol: '+',  glyphName: 'plus'},
+        {gene:'Col11a1',         taxonomy: 'Col11a1',         glyphSymbol: 'o',  glyphName: 'circle'},
+        {gene:'Col12a1',         taxonomy: 'Col12a1',         glyphSymbol: '*',  glyphName: 'asterisk'},
+        {gene:'Col13a1',         taxonomy: 'Col13a1',         glyphSymbol: '.',  glyphName: 'point'},
+        {gene:'Col14a1',        taxonomy: 'Col14a1',         glyphSymbol: 'x',  glyphName: 'cross'},
+        {gene:'Col15a1',          taxonomy: 'Col15a1',         glyphSymbol: 's',  glyphName: 'square'},
+        {gene:'Col16a1',         taxonomy: 'Col16a1',         glyphSymbol: '^',  glyphName: 'triangleUp'},
+        {gene:'Col18a1',           taxonomy: 'Col18a1',         glyphSymbol: 'v',  glyphName: 'triangleDown'},
+        {gene:'Col1a2',           taxonomy: 'Col1a2',         glyphSymbol: '>',  glyphName: 'triangleRight'},
+        {gene:'Col23a1',         taxonomy: 'Col23a1',         glyphSymbol: 'p',  glyphName: 'star5'},
+        {gene:'Col24a1',       taxonomy: 'Col24a1', glyphSymbol: '+',  glyphName: 'plus'},
+        {gene:'Col25a1',         taxonomy: 'Col25a1', glyphSymbol: '*',  glyphName: 'asterisk'},
+        {gene:'Col27a1',         taxonomy: 'Col27a1', glyphSymbol: '.',  glyphName: 'point'},
+        {gene:'Col4a5',        taxonomy: 'Col4a5', glyphSymbol: 'd',  glyphName: 'diamond'},
+        {gene:'Col5a2',          taxonomy: 'Col5a2', glyphSymbol: 'v',  glyphName: 'triangleDown'},
+        {gene:'Col6a5',         taxonomy: 'Col6a5', glyphSymbol: '^',  glyphName: 'triangleUp'},
+        {gene:'Col9a1', taxonomy: 'Col9a1', glyphSymbol: '<',  glyphName: 'triangleLeft'},
+        {gene:'Cplane1',          taxonomy: 'Cplane1', glyphSymbol: '>',  glyphName: 'triangleRight'},
+        {gene:'Cpne4',         taxonomy: 'Cpne4', glyphSymbol: 'p',  glyphName: 'star5'},
+        {gene:'Cpne7',         taxonomy: 'Cpne7', glyphSymbol: 'h',  glyphName: 'star6'},
+        {gene:'Cpne8',           taxonomy: 'Cpne8',    glyphSymbol: '+',  glyphName: 'plus'},
+        {gene:'Cpne9',        taxonomy: 'Cpne9',    glyphSymbol: 'o',  glyphName: 'circle'},
+        {gene:'Crh',          taxonomy: 'Crh',    glyphSymbol: '*',  glyphName: 'asterisk'},
+        {gene:'Crhbp',       taxonomy: 'Crhbp',    glyphSymbol: '.',  glyphName: 'point'},
+        {gene:'Crhr1',         taxonomy: 'Crhr1',    glyphSymbol: 'x',  glyphName: 'cross'},
+        {gene:'Crim1',        taxonomy: 'Crim1',    glyphSymbol: 'x',  glyphName: 'cross'},
+        {gene:'Cspg4',          taxonomy: 'Cspg4',    glyphSymbol: 's',  glyphName: 'square'},
+        {gene:'Ctss',         taxonomy: 'Ctss',    glyphSymbol: 'd',  glyphName: 'diamond'},
+        {gene:'Ctxn3',         taxonomy: 'Ctxn3',    glyphSymbol: '^',  glyphName: 'triangleUp'},
+        {gene:'Cx3cr1',        taxonomy: 'Cx3cr1',    glyphSymbol: 'v',  glyphName: 'triangleDown'},
+        {gene:'D130009I18Rik',         taxonomy: 'D130009I18Rik',    glyphSymbol: '<',  glyphName: 'triangleLeft'},
+        {gene:'Dbh',         taxonomy: 'Dbh',    glyphSymbol: '>',  glyphName: 'triangleRight'},
+        {gene:'Ddc',        taxonomy: 'Ddc',    glyphSymbol: 'h',  glyphName: 'star6'},
+        {gene:'Dnah12',          taxonomy: 'Dnah12',          glyphSymbol: '*',  glyphName: 'asterisk'},
+        {gene:'Dop1a',          taxonomy: 'Dop1a',          glyphSymbol: '.',  glyphName: 'point'},
+        {gene:'Ebf1',          taxonomy: 'Ebf1',          glyphSymbol: '+',  glyphName: 'plus'},
+        {gene:'Ebf2',         taxonomy: 'Ebf2',          glyphSymbol: 'x',  glyphName: 'cross'},
+        {gene:'Ecel1',          taxonomy: 'Ecel1',          glyphSymbol: 'o',  glyphName: 'circle'},
+        {gene:'Egr1',       taxonomy: 'Egr1',          glyphSymbol: 's',  glyphName: 'square'},
+        {gene:'Enpep',          taxonomy: 'Enpep',          glyphSymbol: 'd',  glyphName: 'diamond'},
+        {gene:'Epha3',           taxonomy: 'Epha3',          glyphSymbol: '>',  glyphName: 'triangleRight'},
+        {gene:'Erbb4',        taxonomy: 'Erbb4',          glyphSymbol: 'v',  glyphName: 'triangleDown'},
+        {gene:'Esr1',          taxonomy: 'Esr1',          glyphSymbol: '<',  glyphName: 'triangleLeft'},
+        {gene:'Esr2', taxonomy: 'Esr2',          glyphSymbol: '^',  glyphName: 'triangleUp'},
+        {gene:'Etl4',         taxonomy: 'Etl4',          glyphSymbol: 'p',  glyphName: 'star5'},
+        {gene:'Eya4',         taxonomy: 'Eya4',          glyphSymbol: 'h',  glyphName: 'star6'},
+        {gene:'Fbn2',       taxonomy: 'Fbn2',         glyphSymbol: '+',  glyphName: 'plus'},
+        {gene:'Fbxl7',         taxonomy: 'Fbxl7',         glyphSymbol: 'o',  glyphName: 'circle'},
+        {gene:'Fgf10',          taxonomy: 'Fgf10',         glyphSymbol: '*',  glyphName: 'asterisk'},
+        {gene:'Fgfr1',         taxonomy: 'Fgfr1',         glyphSymbol: '.',  glyphName: 'point'},
+        {gene:'Foxp1',        taxonomy: 'Foxp1',         glyphSymbol: 's',  glyphName: 'square'},
+        {gene:'Foxp2',          taxonomy: 'Foxp2',         glyphSymbol: 'v',  glyphName: 'triangleDown'},
+        {gene:'Gabra4',       taxonomy: 'Gabra4',         glyphSymbol: '>',  glyphName: 'triangleRight'},
+        {gene:'Gabrg1',           taxonomy: 'Gabrg1',  glyphSymbol: '*',  glyphName: 'asterisk'},
+        {gene:'Gad1',        taxonomy: 'Gad1',  glyphSymbol: '.',  glyphName: 'point'},
+        {gene:'Gad2',          taxonomy: 'Gad2',  glyphSymbol: 's',  glyphName: 'square'},
+        {gene:'Galntl6',          taxonomy: 'Galntl6',  glyphSymbol: 'x',  glyphName: 'cross'},
+        {gene:'Galr1',           taxonomy: 'Galr1',  glyphSymbol: '+',  glyphName: 'plus'},
+        {gene:'Galr2',         taxonomy: 'Galr2',  glyphSymbol: 'o',  glyphName: 'circle'},
+        {gene:'Ghr',          taxonomy: 'Ghr',  glyphSymbol: 'v',  glyphName: 'triangleDown'},
+        {gene:'Gipr',          taxonomy: 'Gipr',  glyphSymbol: '+',  glyphName: 'plus'},
+        {gene:'Glp1r',         taxonomy: 'Glp1r',  glyphSymbol: '.',  glyphName: 'point'},
+        {gene:'Gm32647',          taxonomy: 'Gm32647',  glyphSymbol: 's',  glyphName: 'square'},
+        {gene:'Gm47757',       taxonomy: 'Gm47757',  glyphSymbol: '^',  glyphName: 'triangleUp'},
+        {gene:'Gpc5',          taxonomy: 'Gpc5',  glyphSymbol: '>',  glyphName: 'triangleRight'},
+        {gene:'Gpr101',         taxonomy: 'Gpr101',  glyphSymbol: '<',  glyphName: 'triangleLeft'},
+        {gene:'Gpr139',          taxonomy: 'Gpr139',  glyphSymbol: 'p',  glyphName: 'star5'},
+        {gene:'Gpr149',        taxonomy: 'Gpr149',  glyphSymbol: 'h',  glyphName: 'star6'},
+        {gene:'Gpr153',            taxonomy: 'Gpr153',         glyphSymbol: '+',  glyphName: 'plus'},
+        {gene:'Gpr156',         taxonomy: 'Gpr156',         glyphSymbol: 'o',  glyphName: 'circle'},
+        {gene:'Gpr176',           taxonomy: 'Gpr176',         glyphSymbol: '*',  glyphName: 'asterisk'},
+        {gene:'Gpr39',           taxonomy: 'Gpr39',         glyphSymbol: '.',  glyphName: 'point'},
+        {gene:'Gpr6',         taxonomy: 'Gpr6',         glyphSymbol: 'x',  glyphName: 'cross'},
+        {gene:'Gpr83',         taxonomy: 'Gpr83',         glyphSymbol: 's',  glyphName: 'square'},
+        {gene:'Gpr88',          taxonomy: 'Gpr88',         glyphSymbol: 'd',  glyphName: 'diamond'},
+        {gene:'Grik1',          taxonomy: 'Grik1',         glyphSymbol: '^',  glyphName: 'triangleUp'},
+        {gene:'Grin2c',      taxonomy: 'Grin2c',         glyphSymbol: '<',  glyphName: 'triangleLeft'},
+        {gene:'Grp',         taxonomy: 'Grp',         glyphSymbol: '>',  glyphName: 'triangleRight'},
+        {gene:'Gsg1l',        taxonomy: 'Gsg1l',         glyphSymbol: 'p',  glyphName: 'star5'},
+        {gene:'Gulp1',          taxonomy: 'Gulp1',       glyphSymbol: 'o',  glyphName: 'circle'},
+        {gene:'Hcn1',         taxonomy: 'Hcn1',       glyphSymbol: '*',  glyphName: 'asterisk'},
+        {gene:'Hcrtr1',        taxonomy: 'Hcrtr1',       glyphSymbol: 's',  glyphName: 'square'},
+        {gene:'Hcrtr2',        taxonomy: 'Hcrtr2',       glyphSymbol: 'd',  glyphName: 'diamond'},
+        {gene:'Hmcn1',        taxonomy: 'Hmcn1',       glyphSymbol: 'v',  glyphName: 'triangleDown'},
+        {gene:'Htr2a',         taxonomy: 'Htr2a',       glyphSymbol: 'p',  glyphName: 'star5'},
+        {gene:'Htr2c',           taxonomy: 'Htr2c',         glyphSymbol: '+',  glyphName: 'plus'},
+        {gene:'Htr7',        taxonomy: 'Htr7',         glyphSymbol: 'o',  glyphName: 'circle'},
+        {gene:'Igf1',         taxonomy: 'Igf1',         glyphSymbol: '*',  glyphName: 'asterisk'},
+        {gene:'Ikzf1',         taxonomy: 'Ikzf1',         glyphSymbol: 'x',  glyphName: 'cross'},
+        {gene:'Il1rap',           taxonomy: 'Il1rap',         glyphSymbol: 's',  glyphName: 'square'},
+        {gene:'Il1rapl2',          taxonomy: 'Il1rapl2',         glyphSymbol: 'd',  glyphName: 'diamond'},
+        {gene:'Il20ra',          taxonomy: 'Il20ra',         glyphSymbol: '^',  glyphName: 'triangleUp'},
+        {gene:'Irs4',         taxonomy: 'Irs4',         glyphSymbol: '>',  glyphName: 'triangleRight'},
+        {gene:'Itga1',         taxonomy: 'Itga1',         glyphSymbol: 'h',  glyphName: 'star6'},
+        {gene:'Itih5',        taxonomy: 'Itih5',      glyphSymbol: 'o',  glyphName: 'circle'},
+        {gene:'Kcna1',        taxonomy: 'Kcna1',      glyphSymbol: '*',  glyphName: 'asterisk'},
+        {gene:'Kcnh8',         taxonomy: 'Kcnh8',      glyphSymbol: 's',  glyphName: 'square'},
+        {gene:'Kcnip4',         taxonomy: 'Kcnip4',      glyphSymbol: 'd',  glyphName: 'diamond'},
+        {gene:'Kcnmb2',         taxonomy: 'Kcnmb2',      glyphSymbol: 'h',  glyphName: 'star6'},
+        {gene:'Kcnq4',          taxonomy: 'Kcnq4',        glyphSymbol: 'o',  glyphName: 'circle'},
+        {gene:'Klhl1',          taxonomy: 'Klhl1',        glyphSymbol: '*',  glyphName: 'asterisk'},
+        {gene:'Lama1',           taxonomy: 'Lama1',        glyphSymbol: '.',  glyphName: 'point'},
+        {gene:'Lamb1',      taxonomy: 'Lamb1',        glyphSymbol: 'x',  glyphName: 'cross'},
+        {gene:'Lamp5',        taxonomy: 'Lamp5',        glyphSymbol: 's',  glyphName: 'square'},
+        {gene:'Lepr',          taxonomy: 'Lepr',        glyphSymbol: '^',  glyphName: 'triangleUp'},
+        {gene:'Lhx1',        taxonomy: 'Lhx1',        glyphSymbol: 'v',  glyphName: 'triangleDown'},
+        {gene:'Lhx4',         taxonomy: 'Lhx4',        glyphSymbol: '>',  glyphName: 'triangleRight'},
+        {gene:'Lhx9',           taxonomy: 'Lhx9',        glyphSymbol: '<',  glyphName: 'triangleLeft'},
+        {gene:'Lmx1a',        taxonomy: 'Lmx1a',        glyphSymbol: 'p',  glyphName: 'star5'},
+        {gene:'Lmx1b',       taxonomy: 'Lmx1b',        glyphSymbol: 'h',  glyphName: 'star6'},
+        {gene:'Maco1',          taxonomy: 'Maco1',         glyphSymbol: '+',  glyphName: 'plus'},
+        {gene:'Maf',         taxonomy: 'Maf',         glyphSymbol: 'o',  glyphName: 'circle'},
+        {gene:'Mag',         taxonomy: 'Mag',         glyphSymbol: '*',  glyphName: 'asterisk'},
+        {gene:'Maoa',         taxonomy: 'Maoa',         glyphSymbol: '.',  glyphName: 'point'},
+        {gene:'Maob',        taxonomy: 'Maob',         glyphSymbol: 'x',  glyphName: 'cross'},
+        {gene:'Map2',          taxonomy: 'Map2',         glyphSymbol: 's',  glyphName: 'square'},
+        {gene:'Mc4r',         taxonomy: 'Mc4r',         glyphSymbol: '^',  glyphName: 'triangleUp'},
+        {gene:'Mog',           taxonomy: 'Mog',         glyphSymbol: 'v',  glyphName: 'triangleDown'},
+        {gene:'Mybpc1',           taxonomy: 'Mybpc1',         glyphSymbol: '>',  glyphName: 'triangleRight'},
+        {gene:'Myoz3',         taxonomy: 'Myoz3',         glyphSymbol: 'p',  glyphName: 'star5'},
+        {gene:'Necab1',       taxonomy: 'Necab1', glyphSymbol: '+',  glyphName: 'plus'},
+        {gene:'Necab2',         taxonomy: 'Necab2', glyphSymbol: '*',  glyphName: 'asterisk'},
+        {gene:'Nefh',         taxonomy: 'Nefh', glyphSymbol: '.',  glyphName: 'point'},
+        {gene:'Nefl',        taxonomy: 'Nefl', glyphSymbol: 'd',  glyphName: 'diamond'},
+        {gene:'Nefm',          taxonomy: 'Nefm', glyphSymbol: 'v',  glyphName: 'triangleDown'},
+        {gene:'Nfia',         taxonomy: 'Nfia', glyphSymbol: '^',  glyphName: 'triangleUp'},
+        {gene:'Nfib', taxonomy: 'Nfib', glyphSymbol: '<',  glyphName: 'triangleLeft'},
+        {gene:'Nmu',          taxonomy: 'Nmu', glyphSymbol: '>',  glyphName: 'triangleRight'},
+        {gene:'Nos1',         taxonomy: 'Nos1', glyphSymbol: 'p',  glyphName: 'star5'},
+        {gene:'Npas1',         taxonomy: 'Npas1', glyphSymbol: 'h',  glyphName: 'star6'},
+        {gene:'Npffr1',           taxonomy: 'Npffr1',    glyphSymbol: '+',  glyphName: 'plus'},
+        {gene:'Npffr2',        taxonomy: 'Npffr2',    glyphSymbol: 'o',  glyphName: 'circle'},
+        {gene:'Npnt',          taxonomy: 'Npnt',    glyphSymbol: '*',  glyphName: 'asterisk'},
+        {gene:'Npr1',       taxonomy: 'Npr1',    glyphSymbol: '.',  glyphName: 'point'},
+        {gene:'Npr3',         taxonomy: 'Npr3',    glyphSymbol: 'x',  glyphName: 'cross'},
+        {gene:'Nps',        taxonomy: 'Nps',    glyphSymbol: 'x',  glyphName: 'cross'},
+        {gene:'Npsr1',          taxonomy: 'Npsr1',    glyphSymbol: 's',  glyphName: 'square'},
+        {gene:'Npy',         taxonomy: 'Npy',    glyphSymbol: 'd',  glyphName: 'diamond'},
+        {gene:'Npy1r',         taxonomy: 'Npy1r',    glyphSymbol: '^',  glyphName: 'triangleUp'},
+        {gene:'Npy2r',        taxonomy: 'Npy2r',    glyphSymbol: 'v',  glyphName: 'triangleDown'},
+        {gene:'Npy5r',         taxonomy: 'Npy5r',    glyphSymbol: '<',  glyphName: 'triangleLeft'},
+        {gene:'Nr2f2',         taxonomy: 'Nr2f2',    glyphSymbol: '>',  glyphName: 'triangleRight'},
+        {gene:'Nr4a2',        taxonomy: 'Nr4a2',    glyphSymbol: 'h',  glyphName: 'star6'},
+        {gene:'Nrn1',          taxonomy: 'Nrn1',          glyphSymbol: '*',  glyphName: 'asterisk'},
+        {gene:'Ntrk1',          taxonomy: 'Ntrk1',          glyphSymbol: '.',  glyphName: 'point'},
+        {gene:'Nts',          taxonomy: 'Nts',          glyphSymbol: '+',  glyphName: 'plus'},
+        {gene:'Onecut1',         taxonomy: 'Onecut1',          glyphSymbol: 'x',  glyphName: 'cross'},
+        {gene:'Onecut3',          taxonomy: 'Onecut3',          glyphSymbol: 'o',  glyphName: 'circle'},
+        {gene:'Oprk1',       taxonomy: 'Oprk1',          glyphSymbol: 's',  glyphName: 'square'},
+        {gene:'Oprm1',          taxonomy: 'Oprm1',          glyphSymbol: 'd',  glyphName: 'diamond'},
+        {gene:'Otof',           taxonomy: 'Otof',          glyphSymbol: '>',  glyphName: 'triangleRight'},
+        {gene:'Otx2',        taxonomy: 'Otx2',          glyphSymbol: 'v',  glyphName: 'triangleDown'},
+        {gene:'Oxtr',          taxonomy: 'Oxtr',          glyphSymbol: '<',  glyphName: 'triangleLeft'},
+        {gene:'P2rx7', taxonomy: 'P2rx7',          glyphSymbol: '^',  glyphName: 'triangleUp'},
+        {gene:'Pamr1',         taxonomy: 'Pamr1',          glyphSymbol: 'p',  glyphName: 'star5'},
+        {gene:'Pax2',         taxonomy: 'Pax2',          glyphSymbol: 'h',  glyphName: 'star6'},
+        {gene:'Pax3',       taxonomy: 'Pax3',         glyphSymbol: '+',  glyphName: 'plus'},
+        {gene:'Pax5',         taxonomy: 'Pax5',         glyphSymbol: 'o',  glyphName: 'circle'},
+        {gene:'Pax6',          taxonomy: 'Pax6',         glyphSymbol: '*',  glyphName: 'asterisk'},
+        {gene:'Pax7',         taxonomy: 'Pax7',         glyphSymbol: '.',  glyphName: 'point'},
+        {gene:'Pde11a',        taxonomy: 'Pde11a',         glyphSymbol: 's',  glyphName: 'square'},
+        {gene:'Pde7b',          taxonomy: 'Pde7b',         glyphSymbol: 'v',  glyphName: 'triangleDown'},
+        {gene:'Pdgfra',       taxonomy: 'Pdgfra',         glyphSymbol: '>',  glyphName: 'triangleRight'},
+        {gene:'Pdyn',           taxonomy: 'Pdyn',  glyphSymbol: '*',  glyphName: 'asterisk'},
+        {gene:'Pdzd2',        taxonomy: 'Pdzd2',  glyphSymbol: '.',  glyphName: 'point'},
+        {gene:'Pdzrn3',          taxonomy: 'Pdzrn3',  glyphSymbol: 's',  glyphName: 'square'},
+        {gene:'Penk',          taxonomy: 'Penk',  glyphSymbol: 'x',  glyphName: 'cross'},
+        {gene:'Piezo2',           taxonomy: 'Piezo2',  glyphSymbol: '+',  glyphName: 'plus'},
+        {gene:'Plk5',         taxonomy: 'Plk5',  glyphSymbol: 'o',  glyphName: 'circle'},
+        {gene:'Pnoc',          taxonomy: 'Pnoc',  glyphSymbol: 'v',  glyphName: 'triangleDown'},
+        {gene:'Pon2',          taxonomy: 'Pon2',  glyphSymbol: '+',  glyphName: 'plus'},
+        {gene:'Pon3',         taxonomy: 'Pon3',  glyphSymbol: '.',  glyphName: 'point'},
+        {gene:'Postn',          taxonomy: 'Postn',  glyphSymbol: 's',  glyphName: 'square'},
+        {gene:'Pou6f2',       taxonomy: 'Pou6f2',  glyphSymbol: '^',  glyphName: 'triangleUp'},
+        {gene:'Prkcq',          taxonomy: 'Prkcq',  glyphSymbol: '>',  glyphName: 'triangleRight'},
+        {gene:'Prkd1',         taxonomy: 'Prkd1',  glyphSymbol: '<',  glyphName: 'triangleLeft'},
+        {gene:'Prlr',          taxonomy: 'Prlr',  glyphSymbol: 'p',  glyphName: 'star5'},
+        {gene:'Prox1',        taxonomy: 'Prox1',  glyphSymbol: 'h',  glyphName: 'star6'},
+        {gene:'Prph',            taxonomy: 'Prph',         glyphSymbol: '+',  glyphName: 'plus'},
+        {gene:'Prss23',         taxonomy: 'Prss23',         glyphSymbol: 'o',  glyphName: 'circle'},
+        {gene:'Pth2r',           taxonomy: 'Pth2r',         glyphSymbol: '*',  glyphName: 'asterisk'},
+        {gene:'Pvalb',           taxonomy: 'Pvalb',         glyphSymbol: '.',  glyphName: 'point'},
+        {gene:'Qrfpr',         taxonomy: 'Qrfpr',         glyphSymbol: 'x',  glyphName: 'cross'},
+        {gene:'Rab35',         taxonomy: 'Rab35',         glyphSymbol: 's',  glyphName: 'square'},
+        {gene:'Rai14',          taxonomy: 'Rai14',         glyphSymbol: 'd',  glyphName: 'diamond'},
+        {gene:'Reln',          taxonomy: 'Reln',         glyphSymbol: '^',  glyphName: 'triangleUp'},
+        {gene:'Rgs5',      taxonomy: 'Rgs5',         glyphSymbol: '<',  glyphName: 'triangleLeft'},
+        {gene:'Rln3',         taxonomy: 'Rln3',         glyphSymbol: '>',  glyphName: 'triangleRight'},
+        {gene:'Rmst',        taxonomy: 'Rmst',         glyphSymbol: 'p',  glyphName: 'star5'},
+        {gene:'Rnf220',          taxonomy: 'Rnf220',       glyphSymbol: 'o',  glyphName: 'circle'},
+        {gene:'Robo3',         taxonomy: 'Robo3',       glyphSymbol: '*',  glyphName: 'asterisk'},
+        {gene:'Rorb',        taxonomy: 'Rorb',       glyphSymbol: 's',  glyphName: 'square'},
+        {gene:'Rreb1',        taxonomy: 'Rreb1',       glyphSymbol: 'd',  glyphName: 'diamond'},
+        {gene:'Rubcnl',        taxonomy: 'Rubcnl',       glyphSymbol: 'v',  glyphName: 'triangleDown'},
+        {gene:'Runx1',         taxonomy: 'Runx1',       glyphSymbol: 'p',  glyphName: 'star5'},
+        {gene:'Rxfp1',           taxonomy: 'Rxfp1',         glyphSymbol: '+',  glyphName: 'plus'},
+        {gene:'Rxfp2',        taxonomy: 'Rxfp2',         glyphSymbol: 'o',  glyphName: 'circle'},
+        {gene:'Samd3',         taxonomy: 'Samd3',         glyphSymbol: '*',  glyphName: 'asterisk'},
+        {gene:'Satb1',         taxonomy: 'Satb1',         glyphSymbol: 'x',  glyphName: 'cross'},
+        {gene:'Satb2',           taxonomy: 'Satb2',         glyphSymbol: 's',  glyphName: 'square'},
+        {gene:'Scn5a',          taxonomy: 'Scn5a',         glyphSymbol: 'd',  glyphName: 'diamond'},
+        {gene:'Scube2',          taxonomy: 'Scube2',         glyphSymbol: '^',  glyphName: 'triangleUp'},
+        {gene:'Sema3a',         taxonomy: 'Sema3a',         glyphSymbol: '>',  glyphName: 'triangleRight'},
+        {gene:'Sema3e',         taxonomy: 'Sema3e',         glyphSymbol: 'h',  glyphName: 'star6'},
+        {gene:'Serpinb1b',        taxonomy: 'Serpinb1b',      glyphSymbol: 'o',  glyphName: 'circle'},
+        {gene:'Shox2',        taxonomy: 'Shox2',      glyphSymbol: '*',  glyphName: 'asterisk'},
+        {gene:'Six3os1',         taxonomy: 'Six3os1',      glyphSymbol: 's',  glyphName: 'square'},
+        {gene:'Skor2',         taxonomy: 'Skor2',      glyphSymbol: 'd',  glyphName: 'diamond'},
+        {gene:'Slc13a3',         taxonomy: 'Slc13a3',      glyphSymbol: 'h',  glyphName: 'star6'},
+        {gene:'Slc17a6',          taxonomy: 'Slc17a6',        glyphSymbol: 'o',  glyphName: 'circle'},
+        {gene:'Slc17a7',          taxonomy: 'Slc17a7',        glyphSymbol: '*',  glyphName: 'asterisk'},
+        {gene:'Slc17a8',           taxonomy: 'Slc17a8',        glyphSymbol: '.',  glyphName: 'point'},
+        {gene:'Slc18a2',      taxonomy: 'Slc18a2',        glyphSymbol: 'x',  glyphName: 'cross'},
+        {gene:'Slc1a2',        taxonomy: 'Slc1a2',        glyphSymbol: 's',  glyphName: 'square'},
+        {gene:'Slc24a4',          taxonomy: 'Slc24a4',        glyphSymbol: '^',  glyphName: 'triangleUp'},
+        {gene:'Slc32a1',        taxonomy: 'Slc32a1',        glyphSymbol: 'v',  glyphName: 'triangleDown'},
+        {gene:'Slc47a1',         taxonomy: 'Slc47a1',        glyphSymbol: '>',  glyphName: 'triangleRight'},
+        {gene:'Slc4a4',           taxonomy: 'Slc4a4',        glyphSymbol: '<',  glyphName: 'triangleLeft'},
+        {gene:'Slc5a7',        taxonomy: 'Slc5a7',        glyphSymbol: 'p',  glyphName: 'star5'},
+        {gene:'Slc6a2',       taxonomy: 'Slc6a2',        glyphSymbol: 'h',  glyphName: 'star6'},
+        {gene:'Slc6a20a',          taxonomy: 'Slc6a20a',         glyphSymbol: '+',  glyphName: 'plus'},
+        {gene:'Slc6a4',         taxonomy: 'Slc6a4',         glyphSymbol: 'o',  glyphName: 'circle'},
+        {gene:'Slc6a5',         taxonomy: 'Slc6a5',         glyphSymbol: '*',  glyphName: 'asterisk'},
+        {gene:'Slco1a4',         taxonomy: 'Slco1a4',         glyphSymbol: '.',  glyphName: 'point'},
+        {gene:'Snap25',        taxonomy: 'Snap25',         glyphSymbol: 'x',  glyphName: 'cross'},
+        {gene:'Sntg2',          taxonomy: 'Sntg2',         glyphSymbol: 's',  glyphName: 'square'},
+        {gene:'Sox1ot',         taxonomy: 'Sox1ot',         glyphSymbol: '^',  glyphName: 'triangleUp'},
+        {gene:'Sox2ot',           taxonomy: 'Sox2ot',         glyphSymbol: 'v',  glyphName: 'triangleDown'},
+        {gene:'Sox6',           taxonomy: 'Sox6',         glyphSymbol: '>',  glyphName: 'triangleRight'},
+        {gene:'Spef2',         taxonomy: 'Spef2',         glyphSymbol: 'p',  glyphName: 'star5'},
+        {gene:'Sst',       taxonomy: 'Sst', glyphSymbol: '+',  glyphName: 'plus'},
+        {gene:'St18',         taxonomy: 'St18', glyphSymbol: '*',  glyphName: 'asterisk'},
+        {gene:'Sulf1',         taxonomy: 'Sulf1', glyphSymbol: '.',  glyphName: 'point'},
+        {gene:'Synpr',        taxonomy: 'Synpr', glyphSymbol: 'd',  glyphName: 'diamond'},
+        {gene:'Syt10',          taxonomy: 'Syt10', glyphSymbol: 'v',  glyphName: 'triangleDown'},
+        {gene:'Tac1',         taxonomy: 'Tac1', glyphSymbol: '^',  glyphName: 'triangleUp'},
+        {gene:'Tacr1', taxonomy: 'Tacr1', glyphSymbol: '<',  glyphName: 'triangleLeft'},
+        {gene:'Tacr3',          taxonomy: 'Tacr3', glyphSymbol: '>',  glyphName: 'triangleRight'},
+        {gene:'Tcf7l2',         taxonomy: 'Tcf7l2', glyphSymbol: 'p',  glyphName: 'star5'},
+        {gene:'Tfap2b',         taxonomy: 'Tfap2b', glyphSymbol: 'h',  glyphName: 'star6'},
+        {gene:'Tfap2d',           taxonomy: 'Tfap2d',    glyphSymbol: '+',  glyphName: 'plus'},
+        {gene:'Th',        taxonomy: 'Th',    glyphSymbol: 'o',  glyphName: 'circle'},
+        {gene:'Thrb',          taxonomy: 'Thrb',    glyphSymbol: '*',  glyphName: 'asterisk'},
+        {gene:'Tmem178',       taxonomy: 'Tmem178',    glyphSymbol: '.',  glyphName: 'point'},
+        {gene:'Tmem72',         taxonomy: 'Tmem72',    glyphSymbol: 'x',  glyphName: 'cross'},
+        {gene:'Tnc',        taxonomy: 'Tnc'',    glyphSymbol: 'x',  glyphName: 'cross'},
+        {gene:'Tnnt1',          taxonomy: 'Tnnt1',    glyphSymbol: 's',  glyphName: 'square'},
+        {gene:'Tnnt2',         taxonomy: 'Tnnt2',    glyphSymbol: 'd',  glyphName: 'diamond'},
+        {gene:'Tph2',         taxonomy: 'Tph2',    glyphSymbol: '^',  glyphName: 'triangleUp'},
+        {gene:'Trhr',        taxonomy: 'Trhr',    glyphSymbol: 'v',  glyphName: 'triangleDown'},
+        {gene:'Ttn',         taxonomy: 'Ttn',    glyphSymbol: '<',  glyphName: 'triangleLeft'},
+        {gene:'Ttr',         taxonomy: 'Ttr',    glyphSymbol: '>',  glyphName: 'triangleRight'},
+        {gene:'Tut4',        taxonomy: 'Tut4',    glyphSymbol: 'h',  glyphName: 'star6'},
+        {gene:'Usp24',          taxonomy: 'Usp24',          glyphSymbol: '*',  glyphName: 'asterisk'},
+        {gene:'Usp43',          taxonomy: 'Usp43',          glyphSymbol: '.',  glyphName: 'point'},
+        {gene:'Vav3',          taxonomy: 'Vav3',          glyphSymbol: '+',  glyphName: 'plus'},
+        {gene:'Vmn1r196',         taxonomy: 'Vmn1r196',          glyphSymbol: 'x',  glyphName: 'cross'},
+        {gene:'Vmn1r206',          taxonomy: 'Vmn1r206',          glyphSymbol: 'o',  glyphName: 'circle'},
+        {gene:'Vmn1r209',       taxonomy: 'Vmn1r209',          glyphSymbol: 's',  glyphName: 'square'},
+        {gene:'Vsx2',          taxonomy: 'Vsx2',          glyphSymbol: 'd',  glyphName: 'diamond'},
+        {gene:'Vwc2',           taxonomy: 'Vwc2',          glyphSymbol: '>',  glyphName: 'triangleRight'},
+        {gene:'Xirp2',        taxonomy: 'Xirp2',          glyphSymbol: 'v',  glyphName: 'triangleDown'},
+        {gene:'Zeb2',          taxonomy: 'Zeb2',          glyphSymbol: '<',  glyphName: 'triangleLeft'},
+        {gene:'Zfhx3', taxonomy: 'Zfhx3',          glyphSymbol: '^',  glyphName: 'triangleUp'},
+        {gene:'Zfp804b',         taxonomy: 'Zfp804b',          glyphSymbol: 'p',  glyphName: 'star5'},
         ];
 
     return out
 }
 
+
 //create color ramp.
 function glyphColor(y) {
-    return y === 'non_neuron' ? '#FFFFFF' : //hsv: [0 0 1]);
-        y === 'pc_or_in' ? '#407F59' :      //hsv: [.4 .5 .5]);
-            y === 'less_active' ? '#96B38F' :   //hsv: [.3 .2 .7]);
-                y === 'pc' ? '#00FF00' :            //hsv: [1/3 1 1]);
-                    y === 'pc2' ? '#44B300' :           //hsv: [.27 1 .7]);
-                        y === 'in_general' ? '#0000FF' :    //hsv: [2/3 1 1]);
-                            y === 'sst' ? '#00B3FF' :           //hsv: [.55 1 1]);
-                                y === 'pvalb' ? '#5C33FF' :         //hsv: [.7 .8 1]);
-                                    y === 'ngf' ? '#FF00E6' :           //hsv: [.85 1 1]);
-                                        y === 'cnr1' ? '#FF0000' :          //hsv: [ 1 1 1]);
-                                            y === 'vip' ? '#FFC700' :           //hsv: [.13 1 1]);
-                                                y === 'cxcl14' ? '#995C00' :        //hsv: [.1 1 .6]);
-                                                    '#FD6A02';
+  return y === '8030451A03Rik' ? '#F0F8FF':
+    y === '9130024F11Rik' ? '#FAEBD7':
+      y === '9630002D21Rik' ? '#00FFFF':
+        y === 'Abca13' ? '#7FFFD4':
+          y === 'Abi3bp' ? '#F0FFFF':
+            y === 'Adam33' ? '#F5F5DC':
+              y === 'Adamts18' ? '#FFE4C4':
+                y === 'Adamts19' ? '#FFEBCD':
+                  y === 'Adamtsl5' ? '#0000FF':
+                    y === 'Adarb2' ? '#8A2BE2':
+                      y === 'Adcyap1' ? '#A52A2A':
+                        y === 'Adra1a' ? '#DEB887':
+                          y === 'Adra1b' ? '#5F9EA0':
+                            y === 'Aifm3' ? '#7FFF00':
+                              y === 'Alkal2' ? '#D2691E':
+                                y === 'Angpt1' ? '#FF7F50':
+                                  y === 'Anxa2' ? '#6495ED':
+                                    y === 'Anxa4' ? '#FFF8DC':
+                                      y === 'Arhgap6' ? '#DC143C':
+                                        y === 'Arhgef38' ? '#00FFFF':
+                                          y === 'Asb4' ? '#00008B':
+                                            y === 'Best1' ? '#008B8B':
+                                              y === 'Brs3' ? '#B8860B':
+                                                y === 'C030005K06Rik' ? '#A9A9A9':
+                                                  y === 'C130060K24Rik' ? '#006400':
+                                                    y === 'C1ql3' ? '#BDB76B':
+                                                      y === 'C1ql4' ? '#8B008B':
+                                                        y === 'C7' ? '#556B2F':
+                                                          y === 'CN725425' ? '#FF8C00':
+                                                            y === 'Cacna2d1' ? '#9932CC':
+                                                              y === 'Calb1' ? '#8B0000':
+                                                                y === 'Calb2' ? '#E9967A':
+                                                                  y === 'Calca' ? '#8FBC8F':
+                                                                    y === 'Calcr' ? '#483D8B':
+                                                                      y === 'Calcrl' ? '#2F4F4F':
+                                                                        y === 'Cartpt' ? '#00CED1':
+                                                                          y === 'Cbln1' ? '#9400D3':
+                                                                            y === 'Cbln2' ? '#FF1493':
+                                                                              y === 'Cbln4' ? '#00BFFF':
+                                                                                y === 'Ccdc88c' ? '#696969':
+                                                                                  y === 'Cd24a' ? '#1E90FF':
+                                                                                    y === 'Cd36' ? '#B22222':
+                                                                                      y === 'Cdc14a' ? '#FFFAF0':
+                                                                                        y === 'Cdh23' ? '#228B22':
+                                                                                          y === 'Cep83' ? '#FF00FF':
+                                                                                            y === 'Chat' ? '#DCDCDC':
+                                                                                              y === 'Chodl' ? '#F8F8FF':
+                                                                                                y === 'Chrdl1' ? '#FFD700':
+                                                                                                  y === 'Chst9' ? '#DAA520':
+                                                                                                    y === 'Cnr1' ? '#808080':
+                                                                                                      y === 'Cntn5' ? '#008000':
+                                                                                                        y === 'Col11a1' ? '#ADFF2F':
+                                                                                                          y === 'Col12a1' ? '#F0FFF0':
+                                                                                                            y === 'Col13a1' ? '#FF69B4':
+                                                                                                              y === 'Col14a1' ? '#CD5C5C':
+                                                                                                                y === 'Col15a1' ? '#4B0082':
+                                                                                                                  y === 'Col16a1' ? '#FFFFF0':
+                                                                                                                    y === 'Col18a1' ? '#F0E68C':
+                                                                                                                      y === 'Col1a2' ? '#E6E6FA':
+                                                                                                                        y === 'Col23a1' ? '#FFF0F5':
+                                                                                                                          y === 'Col24a1' ? '#7CFC00':
+                                                                                                                            y === 'Col25a1' ? '#FFFACD':
+                                                                                                                              y === 'Col27a1' ? '#ADD8E6':
+                                                                                                                                y === 'Col4a5' ? '#F08080':
+                                                                                                                                  y === 'Col5a2' ? '#E0FFFF':
+                                                                                                                                    y === 'Col6a5' ? '#FAFAD2':
+                                                                                                                                      y === 'Col9a1' ? '#D3D3D3':
+                                                                                                                                        y === 'Cplane1' ? '#90EE90':
+                                                                                                                                          y === 'Cpne4' ? '#FFB6C1':
+                                                                                                                                            y === 'Cpne7' ? '#FFA07A':
+                                                                                                                                              y === 'Cpne8' ? '#20B2AA':
+                                                                                                                                                y === 'Cpne9' ? '#87CEFA':
+                                                                                                                                                  y === 'Crh' ? '#778899':
+                                                                                                                                                    y === 'Crhbp' ? '#B0C4DE':
+                                                                                                                                                      y === 'Crhr1' ? '#FFFFE0':
+                                                                                                                                                        y === 'Crim1' ? '#00FF00':
+                                                                                                                                                          y === 'Cspg4' ? '#32CD32':
+                                                                                                                                                            y === 'Ctss' ? '#FAF0E6':
+                                                                                                                                                              y === 'Ctxn3' ? '#FF00FF':
+                                                                                                                                                                y === 'Cx3cr1' ? '#800000':
+                                                                                                                                                                  y === 'D130009I18Rik' ? '#66CDAA':
+                                                                                                                                                                    y === 'Dbh' ? '#0000CD':
+                                                                                                                                                                      y === 'Ddc' ? '#BA55D3':
+                                                                                                                                                                        y === 'Dnah12' ? '#9370DB':
+                                                                                                                                                                          y === 'Dop1a' ? '#3CB371':
+                                                                                                                                                                            y === 'Ebf1' ? '#7B68EE':
+                                                                                                                                                                              y === 'Ebf2' ? '#00FA9A':
+                                                                                                                                                                                y === 'Ecel1' ? '#48D1CC':
+                                                                                                                                                                                  y === 'Egr1' ? '#C71585':
+                                                                                                                                                                                    y === 'Enpep' ? '#191970':
+                                                                                                                                                                                      y === 'Epha3' ? '#F5FFFA':
+                                                                                                                                                                                        y === 'Erbb4' ? '#FFE4E1':
+                                                                                                                                                                                          y === 'Esr1' ? '#FFE4B5':
+                                                                                                                                                                                            y === 'Esr2' ? '#FFDEAD':
+                                                                                                                                                                                              y === 'Etl4' ? '#000080':
+                                                                                                                                                                                                y === 'Eya4' ? '#FDF5E6':
+                                                                                                                                                                                                  y === 'Fbn2' ? '#808000':
+                                                                                                                                                                                                    y === 'Fbxl7' ? '#6B8E23':
+                                                                                                                                                                                                      y === 'Fgf10' ? '#FFA500':
+                                                                                                                                                                                                        y === 'Fgfr1' ? '#FF4500':
+                                                                                                                                                                                                          y === 'Foxp1' ? '#DA70D6':
+                                                                                                                                                                                                            y === 'Foxp2' ? '#EEE8AA':
+                                                                                                                                                                                                              y === 'Gabra4' ? '#98FB98':
+                                                                                                                                                                                                                y === 'Gabrg1' ? '#AFEEEE':
+                                                                                                                                                                                                                  y === 'Gad1' ? '#DB7093':
+                                                                                                                                                                                                                    y === 'Gad2' ? '#FFEFD5':
+                                                                                                                                                                                                                      y === 'Galntl6' ? '#FFDAB9':
+                                                                                                                                                                                                                        y === 'Galr1' ? '#CD853F':
+                                                                                                                                                                                                                          y === 'Galr2' ? '#FFC0CB':
+                                                                                                                                                                                                                            y === 'Ghr' ? '#DDA0DD':
+                                                                                                                                                                                                                              y === 'Gipr' ? '#B0E0E6':
+                                                                                                                                                                                                                                y === 'Glp1r' ? '#800080':
+                                                                                                                                                                                                                                  y === 'Gm32647' ? '#663399':
+                                                                                                                                                                                                                                    y === 'Gm47757' ? '#FF0000':
+                                                                                                                                                                                                                                      y === 'Gpc5' ? '#BC8F8F':
+                                                                                                                                                                                                                                        y === 'Gpr101' ? '#4169E1':
+                                                                                                                                                                                                                                          y === 'Gpr139' ? '#8B4513':
+                                                                                                                                                                                                                                            y === 'Gpr149' ? '#FA8072':
+                                                                                                                                                                                                                                              y === 'Gpr153' ? '#F4A460':
+                                                                                                                                                                                                                                                y === 'Gpr156' ? '#2E8B57':
+                                                                                                                                                                                                                                                  y === 'Gpr176' ? '#FFF5EE':
+                                                                                                                                                                                                                                                    y === 'Gpr39' ? '#A0522D':
+                                                                                                                                                                                                                                                      y === 'Gpr6' ? '#C0C0C0':
+                                                                                                                                                                                                                                                        y === 'Gpr83' ? '#87CEEB':
+                                                                                                                                                                                                                                                          y === 'Gpr88' ? '#6A5ACD':
+                                                                                                                                                                                                                                                            y === 'Grik1' ? '#708090':
+                                                                                                                                                                                                                                                              y === 'Grin2c' ? '#FFFAFA':
+                                                                                                                                                                                                                                                                y === 'Grp' ? '#00FF7F':
+                                                                                                                                                                                                                                                                  y === 'Gsg1l' ? '#4682B4':
+                                                                                                                                                                                                                                                                    y === 'Gulp1' ? '#D2B48C':
+                                                                                                                                                                                                                                                                      y === 'Hcn1' ? '#008080':
+                                                                                                                                                                                                                                                                        y === 'Hcrtr1' ? '#D8BFD8':
+                                                                                                                                                                                                                                                                          y === 'Hcrtr2' ? '#FF6347':
+                                                                                                                                                                                                                                                                            y === 'Hmcn1' ? '#40E0D0':
+                                                                                                                                                                                                                                                                              y === 'Htr2a' ? '#EE82EE':
+                                                                                                                                                                                                                                                                                y === 'Htr2c' ? '#F5DEB3':
+                                                                                                                                                                                                                                                                                  y === 'Htr7' ? '#FFFFFF':
+                                                                                                                                                                                                                                                                                    y === 'Igf1' ? '#F5F5F5':
+                                                                                                                                                                                                                                                                                      y === 'Ikzf1' ? '#FFFF00':
+                                                                                                                                                                                                                                                                                        y === 'Il1rap' ? '#9ACD32':
+                                                                                                                                                                                                                                                                                          y === 'Il1rapl2' ? '#F0F8FF':
+                                                                                                                                                                                                                                                                                            y === 'Il20ra' ? '#FAEBD7':
+                                                                                                                                                                                                                                                                                              y === 'Irs4' ? '#00FFFF':
+                                                                                                                                                                                                                                                                                                y === 'Itga1' ? '#7FFFD4':
+                                                                                                                                                                                                                                                                                                  y === 'Itih5' ? '#F0FFFF':
+                                                                                                                                                                                                                                                                                                    y === 'Kcna1' ? '#F5F5DC':
+                                                                                                                                                                                                                                                                                                      y === 'Kcnh8' ? '#FFE4C4':
+                                                                                                                                                                                                                                                                                                        y === 'Kcnip4' ? '#FFEBCD':
+                                                                                                                                                                                                                                                                                                          y === 'Kcnmb2' ? '#0000FF':
+                                                                                                                                                                                                                                                                                                            y === 'Kcnq4' ? '#8A2BE2':
+                                                                                                                                                                                                                                                                                                              y === 'Klhl1' ? '#A52A2A':
+                                                                                                                                                                                                                                                                                                                y === 'Lama1' ? '#DEB887':
+                                                                                                                                                                                                                                                                                                                  y === 'Lamb1' ? '#5F9EA0':
+                                                                                                                                                                                                                                                                                                                    y === 'Lamp5' ? '#7FFF00':
+                                                                                                                                                                                                                                                                                                                      y === 'Lepr' ? '#D2691E':
+                                                                                                                                                                                                                                                                                                                        y === 'Lhx1' ? '#FF7F50':
+                                                                                                                                                                                                                                                                                                                          y === 'Lhx4' ? '#6495ED':
+                                                                                                                                                                                                                                                                                                                            y === 'Lhx9' ? '#FFF8DC':
+                                                                                                                                                                                                                                                                                                                              y === 'Lmx1a' ? '#DC143C':
+                                                                                                                                                                                                                                                                                                                                y === 'Lmx1b' ? '#00FFFF':
+                                                                                                                                                                                                                                                                                                                                  y === 'Maco1' ? '#00008B':
+                                                                                                                                                                                                                                                                                                                                    y === 'Maf' ? '#008B8B':
+                                                                                                                                                                                                                                                                                                                                      y === 'Mag' ? '#B8860B':
+                                                                                                                                                                                                                                                                                                                                        y === 'Maoa' ? '#A9A9A9':
+                                                                                                                                                                                                                                                                                                                                          y === 'Maob' ? '#006400':
+                                                                                                                                                                                                                                                                                                                                            y === 'Map2' ? '#BDB76B':
+                                                                                                                                                                                                                                                                                                                                              y === 'Mc4r' ? '#8B008B':
+                                                                                                                                                                                                                                                                                                                                                y === 'Mog' ? '#556B2F':
+                                                                                                                                                                                                                                                                                                                                                  y === 'Mybpc1' ? '#FF8C00':
+                                                                                                                                                                                                                                                                                                                                                    y === 'Myoz3' ? '#9932CC':
+                                                                                                                                                                                                                                                                                                                                                      y === 'Necab1' ? '#8B0000':
+                                                                                                                                                                                                                                                                                                                                                        y === 'Necab2' ? '#E9967A':
+                                                                                                                                                                                                                                                                                                                                                          y === 'Nefh' ? '#8FBC8F':
+                                                                                                                                                                                                                                                                                                                                                            y === 'Nefl' ? '#483D8B':
+                                                                                                                                                                                                                                                                                                                                                              y === 'Nefm' ? '#2F4F4F':
+                                                                                                                                                                                                                                                                                                                                                                y === 'Nfia' ? '#00CED1':
+                                                                                                                                                                                                                                                                                                                                                                  y === 'Nfib' ? '#9400D3':
+                                                                                                                                                                                                                                                                                                                                                                    y === 'Nmu' ? '#FF1493':
+                                                                                                                                                                                                                                                                                                                                                                      y === 'Nos1' ? '#00BFFF':
+                                                                                                                                                                                                                                                                                                                                                                        y === 'Npas1' ? '#696969':
+                                                                                                                                                                                                                                                                                                                                                                          y === 'Npffr1' ? '#1E90FF':
+                                                                                                                                                                                                                                                                                                                                                                            y === 'Npffr2' ? '#B22222':
+                                                                                                                                                                                                                                                                                                                                                                              y === 'Npnt' ? '#FFFAF0':
+                                                                                                                                                                                                                                                                                                                                                                                y === 'Npr1' ? '#228B22':
+                                                                                                                                                                                                                                                                                                                                                                                  y === 'Npr3' ? '#FF00FF':
+                                                                                                                                                                                                                                                                                                                                                                                    y === 'Nps' ? '#DCDCDC':
+                                                                                                                                                                                                                                                                                                                                                                                      y === 'Npsr1' ? '#F8F8FF':
+                                                                                                                                                                                                                                                                                                                                                                                        y === 'Npy' ? '#FFD700':
+                                                                                                                                                                                                                                                                                                                                                                                          y === 'Npy1r' ? '#DAA520':
+                                                                                                                                                                                                                                                                                                                                                                                            y === 'Npy2r' ? '#808080':
+                                                                                                                                                                                                                                                                                                                                                                                              y === 'Npy5r' ? '#008000':
+                                                                                                                                                                                                                                                                                                                                                                                                y === 'Nr2f2' ? '#ADFF2F':
+                                                                                                                                                                                                                                                                                                                                                                                                  y === 'Nr4a2' ? '#F0FFF0':
+                                                                                                                                                                                                                                                                                                                                                                                                    y === 'Nrn1' ? '#FF69B4':
+                                                                                                                                                                                                                                                                                                                                                                                                      y === 'Ntrk1' ? '#CD5C5C':
+                                                                                                                                                                                                                                                                                                                                                                                                        y === 'Nts' ? '#4B0082':
+                                                                                                                                                                                                                                                                                                                                                                                                          y === 'Onecut1' ? '#FFFFF0':
+                                                                                                                                                                                                                                                                                                                                                                                                            y === 'Onecut3' ? '#F0E68C':
+                                                                                                                                                                                                                                                                                                                                                                                                              y === 'Oprk1' ? '#E6E6FA':
+                                                                                                                                                                                                                                                                                                                                                                                                                y === 'Oprm1' ? '#FFF0F5':
+                                                                                                                                                                                                                                                                                                                                                                                                                  y === 'Otof' ? '#7CFC00':
+                                                                                                                                                                                                                                                                                                                                                                                                                    y === 'Otx2' ? '#FFFACD':
+                                                                                                                                                                                                                                                                                                                                                                                                                      y === 'Oxtr' ? '#ADD8E6':
+                                                                                                                                                                                                                                                                                                                                                                                                                        y === 'P2rx7' ? '#F08080':
+                                                                                                                                                                                                                                                                                                                                                                                                                          y === 'Pamr1' ? '#E0FFFF':
+                                                                                                                                                                                                                                                                                                                                                                                                                            y === 'Pax2' ? '#FAFAD2':
+                                                                                                                                                                                                                                                                                                                                                                                                                              y === 'Pax3' ? '#D3D3D3':
+                                                                                                                                                                                                                                                                                                                                                                                                                                y === 'Pax5' ? '#90EE90':
+                                                                                                                                                                                                                                                                                                                                                                                                                                  y === 'Pax6' ? '#FFB6C1':
+                                                                                                                                                                                                                                                                                                                                                                                                                                    y === 'Pax7' ? '#FFA07A':
+                                                                                                                                                                                                                                                                                                                                                                                                                                      y === 'Pde11a' ? '#20B2AA':
+                                                                                                                                                                                                                                                                                                                                                                                                                                        y === 'Pde7b' ? '#87CEFA':
+                                                                                                                                                                                                                                                                                                                                                                                                                                          y === 'Pdgfra' ? '#778899':
+                                                                                                                                                                                                                                                                                                                                                                                                                                            y === 'Pdyn' ? '#B0C4DE':
+                                                                                                                                                                                                                                                                                                                                                                                                                                              y === 'Pdzd2' ? '#FFFFE0':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                y === 'Pdzrn3' ? '#00FF00':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  y === 'Penk' ? '#32CD32':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                    y === 'Piezo2' ? '#FAF0E6':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                      y === 'Plk5' ? '#FF00FF':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        y === 'Pnoc' ? '#800000':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                          y === 'Pon2' ? '#66CDAA':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            y === 'Pon3' ? '#0000CD':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                              y === 'Postn' ? '#BA55D3':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                y === 'Pou6f2' ? '#9370DB':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                  y === 'Prkcq' ? '#3CB371':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                    y === 'Prkd1' ? '#7B68EE':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                      y === 'Prlr' ? '#00FA9A':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        y === 'Prox1' ? '#48D1CC':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                          y === 'Prph' ? '#C71585':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                            y === 'Prss23' ? '#191970':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                              y === 'Pth2r' ? '#F5FFFA':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                y === 'Pvalb' ? '#FFE4E1':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  y === 'Qrfpr' ? '#FFE4B5':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    y === 'Rab35' ? '#FFDEAD':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      y === 'Rai14' ? '#000080':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        y === 'Reln' ? '#FDF5E6':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          y === 'Rgs5' ? '#808000':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            y === 'Rln3' ? '#6B8E23':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              y === 'Rmst' ? '#FFA500':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                y === 'Rnf220' ? '#FF4500':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  y === 'Robo3' ? '#DA70D6':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    y === 'Rorb' ? '#EEE8AA':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      y === 'Rreb1' ? '#98FB98':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        y === 'Rubcnl' ? '#AFEEEE':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          y === 'Runx1' ? '#DB7093':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            y === 'Rxfp1' ? '#FFEFD5':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              y === 'Rxfp2' ? '#FFDAB9':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                y === 'Samd3' ? '#CD853F':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  y === 'Satb1' ? '#FFC0CB':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    y === 'Satb2' ? '#DDA0DD':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      y === 'Scn5a' ? '#B0E0E6':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        y === 'Scube2' ? '#800080':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          y === 'Sema3a' ? '#663399':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            y === 'Sema3e' ? '#FF0000':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              y === 'Serpinb1b' ? '#BC8F8F':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                y === 'Shox2' ? '#4169E1':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  y === 'Six3os1' ? '#8B4513':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    y === 'Skor2' ? '#FA8072':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      y === 'Slc13a3' ? '#F4A460':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        y === 'Slc17a6' ? '#2E8B57':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          y === 'Slc17a7' ? '#FFF5EE':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            y === 'Slc17a8' ? '#A0522D':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              y === 'Slc18a2' ? '#C0C0C0':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                y === 'Slc1a2' ? '#87CEEB':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  y === 'Slc24a4' ? '#6A5ACD':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    y === 'Slc32a1' ? '#708090':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      y === 'Slc47a1' ? '#FFFAFA':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        y === 'Slc4a4' ? '#00FF7F':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          y === 'Slc5a7' ? '#4682B4':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            y === 'Slc6a2' ? '#D2B48C':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              y === 'Slc6a20a' ? '#008080':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                y === 'Slc6a4' ? '#D8BFD8':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  y === 'Slc6a5' ? '#FF6347':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    y === 'Slco1a4' ? '#40E0D0':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      y === 'Snap25' ? '#EE82EE':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        y === 'Sntg2' ? '#F5DEB3':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          y === 'Sox1ot' ? '#FFFFFF':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            y === 'Sox2ot' ? '#F5F5F5':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              y === 'Sox6' ? '#FFFF00':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                y === 'Spef2' ? '#9ACD32':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  y === 'Sst' ? '#F0F8FF':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    y === 'St18' ? '#FAEBD7':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      y === 'Sulf1' ? '#00FFFF':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        y === 'Synpr' ? '#7FFFD4':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          y === 'Syt10' ? '#F0FFFF':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            y === 'Tac1' ? '#F5F5DC':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              y === 'Tacr1' ? '#FFE4C4':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                y === 'Tacr3' ? '#FFEBCD':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  y === 'Tcf7l2' ? '#0000FF':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    y === 'Tfap2b' ? '#8A2BE2':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      y === 'Tfap2d' ? '#A52A2A':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        y === 'Th' ? '#DEB887':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          y === 'Thrb' ? '#5F9EA0':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            y === 'Tmem178' ? '#7FFF00':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              y === 'Tmem72' ? '#D2691E':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                y === 'Tnc' ? '#FF7F50':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  y === 'Tnnt1' ? '#6495ED':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    y === 'Tnnt2' ? '#FFF8DC':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      y === 'Tph2' ? '#DC143C':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        y === 'Trhr' ? '#00FFFF':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          y === 'Ttn' ? '#00008B':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            y === 'Ttr' ? '#008B8B':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              y === 'Tut4' ? '#B8860B':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                y === 'Usp24' ? '#A9A9A9':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  y === 'Usp43' ? '#006400':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    y === 'Vav3' ? '#BDB76B':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      y === 'Vmn1r196' ? '#8B008B':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        y === 'Vmn1r206' ? '#556B2F':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          y === 'Vmn1r209' ? '#FF8C00':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            y === 'Vsx2' ? '#9932CC':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              y === 'Vwc2' ? '#8B0000':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                y === 'Xirp2' ? '#E9967A':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  y === 'Zeb2' ? '#8FBC8F':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    y === 'Zfhx3' ? '#483D8B':
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      y === 'Zfp804b' ? '#2F4F4F':
 }
